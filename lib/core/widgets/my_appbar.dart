@@ -30,7 +30,7 @@ class MyAppBar extends StatelessWidget {
               title.tr(),
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
-              style: TextStyles.font16WhiteSemiBold,
+              style: TextStyles.font17WhiteRegular,
             ),
           ),
           IconButton(

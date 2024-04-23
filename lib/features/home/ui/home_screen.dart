@@ -1,7 +1,9 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jhijri/_src/_jHijri.dart';
 import 'package:lottie/lottie.dart';
@@ -194,43 +196,49 @@ class HomeScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  height: 70.h,
-                  width: 70.w,
-                  decoration: BoxDecoration(
-                      color: ColorsManager.primarySwatch,
-                      borderRadius: BorderRadius.circular(10.r)),
-                  child: Column(
-                    children: [
-                      verticalSpace(10),
-                      Image.asset('assets/image/azkarSabah.png',
-                          width: 35.w, height: 35.h),
-                      verticalSpace(5),
-                      Text(
-                        'azkarSabah'.tr(),
-                        style: TextStyles.font13WhiteRegular,
-                      ),
-                    ],
+                GestureDetector(
+                  onTap: () => context.pushNamed('azkarSabahScreen'),
+                  child: Container(
+                    height: 70.h,
+                    width: 70.w,
+                    decoration: BoxDecoration(
+                        color: ColorsManager.primarySwatch,
+                        borderRadius: BorderRadius.circular(10.r)),
+                    child: Column(
+                      children: [
+                        verticalSpace(10),
+                        Image.asset('assets/image/azkarSabah.png',
+                            width: 35.w, height: 35.h),
+                        verticalSpace(5),
+                        Text(
+                          'azkarSabah'.tr(),
+                          style: TextStyles.font13WhiteRegular,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 horizontalSpace(30),
-                Container(
-                  height: 70.h,
-                  width: 70.w,
-                  decoration: BoxDecoration(
-                      color: ColorsManager.primarySwatch,
-                      borderRadius: BorderRadius.circular(10.r)),
-                  child: Column(
-                    children: [
-                      verticalSpace(10),
-                      Image.asset('assets/image/azkarMasaa.png',
-                          width: 35.w, height: 35.h),
-                      verticalSpace(5),
-                      Text(
-                        'azkarMasaa'.tr(),
-                        style: TextStyles.font13WhiteRegular,
-                      ),
-                    ],
+                GestureDetector(
+                  onTap: () => context.pushNamed('azkarMasaaScreen'),
+                  child: Container(
+                    height: 70.h,
+                    width: 70.w,
+                    decoration: BoxDecoration(
+                        color: ColorsManager.primarySwatch,
+                        borderRadius: BorderRadius.circular(10.r)),
+                    child: Column(
+                      children: [
+                        verticalSpace(10),
+                        Image.asset('assets/image/azkarMasaa.png',
+                            width: 35.w, height: 35.h),
+                        verticalSpace(5),
+                        Text(
+                          'azkarMasaa'.tr(),
+                          style: TextStyles.font13WhiteRegular,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 horizontalSpace(30),
