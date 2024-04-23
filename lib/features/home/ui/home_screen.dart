@@ -1,8 +1,11 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jhijri/_src/_jHijri.dart';
 import 'package:lottie/lottie.dart';
+import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/helper/spacing.dart';
 import 'package:quran_app/core/theme/colors.dart';
 import 'package:quran_app/core/theme/style.dart';
@@ -15,25 +18,23 @@ class HomeScreen extends StatelessWidget {
       DateFormat('d-MMMM-yyyy', 'ar').format(DateTime.now()).toString();
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Container(
-          padding: EdgeInsets.only(top: 10.h),
-          height: double.infinity,
-          width: double.infinity,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/image/background.jpeg"),
-              fit: BoxFit.fill,
-            ),
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.only(top: 35.h),
+        height: double.infinity,
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/image/background.jpeg"),
+            fit: BoxFit.fill,
           ),
-          child: Stack(
-            alignment: Alignment.topCenter,
-            children: [
-              buildDateTimeCardAndAnimationImage(),
-              Positioned(bottom: 30.h, child: buildCategories()),
-            ],
-          ),
+        ),
+        child: Stack(
+          alignment: Alignment.topCenter,
+          children: [
+            buildDateTimeCardAndAnimationImage(),
+            Positioned(bottom: 30.h, child: buildCategories(context)),
+          ],
         ),
       ),
     );
@@ -62,6 +63,7 @@ class HomeScreen extends StatelessWidget {
             EdgeInsets.only(top: 0.h, right: 10.w, left: 10.w, bottom: 10.h),
         child: Column(
           children: [
+            verticalSpace(10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -95,7 +97,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget buildCategories() {
+  Widget buildCategories(BuildContext context) {
     return Container(
       height: 200.h,
       width: 320.w,
@@ -232,23 +234,26 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 horizontalSpace(30),
-                Container(
-                  height: 70.h,
-                  width: 70.w,
-                  decoration: BoxDecoration(
-                      color: ColorsManager.primarySwatch,
-                      borderRadius: BorderRadius.circular(10.r)),
-                  child: Column(
-                    children: [
-                      verticalSpace(10),
-                      Image.asset('assets/image/hadith.png',
-                          width: 35.w, height: 35.h),
-                      verticalSpace(5),
-                      Text(
-                        'hadith'.tr(),
-                        style: TextStyles.font13WhiteRegular,
-                      ),
-                    ],
+                GestureDetector(
+                  onTap: () => context.pushNamed('hadithScreen'),
+                  child: Container(
+                    height: 70.h,
+                    width: 70.w,
+                    decoration: BoxDecoration(
+                        color: ColorsManager.primarySwatch,
+                        borderRadius: BorderRadius.circular(10.r)),
+                    child: Column(
+                      children: [
+                        verticalSpace(10),
+                        Image.asset('assets/image/hadith.png',
+                            width: 35.w, height: 35.h),
+                        verticalSpace(5),
+                        Text(
+                          'hadith'.tr(),
+                          style: TextStyles.font13WhiteRegular,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
