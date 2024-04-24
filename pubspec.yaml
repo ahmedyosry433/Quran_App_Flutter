@@ -28,16 +28,18 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  carousel_slider: ^4.2.1
   cupertino_icons: ^1.0.2
   easy_localization: ^3.0.3
   flutter:
     sdk: flutter
   flutter_native_splash: ^2.3.2
   flutter_screenutil: ^5.9.0
+  jhijri: ^1.0.0
   lottie: ^2.6.0
+  percent_indicator: ^4.2.3
   scrollable_positioned_list: ^0.3.8
   shared_preferences: ^2.2.2
-  jhijri: ^1.0.0
 
 dev_dependencies:
   flutter_launcher_icons: "^0.13.1"

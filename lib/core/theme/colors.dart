@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ColorsManager {
-  static Color primarySwatch = const Color.fromARGB(255, 175, 130, 33);
-  static Color primary = const Color.fromARGB(255, 201, 163, 82);
+  static Color primarySwatch = const Color.fromARGB(255, 231, 177, 61);
+  // static Color primarySwatch = const Color.fromARGB(255, 175, 130, 33);
+  static Color primary = const Color.fromARGB(255, 218, 180, 100);
+  // static Color primary = const Color.fromARGB(255, 201, 163, 82);
   static Color splash = Colors.deepPurpleAccent;
   static Color ihdaaSignatureBoard = const Color.fromRGBO(57, 39, 59, 1);
   //static Color secondary = Colors.amber;
   // const Color.fromRGBO(224, 80, 118, 1)
-  static Color secondary = const Color.fromRGBO(251, 210, 222, 1);
+  static Color secondary = const Color.fromARGB(255, 189, 151, 82);
   static Color thirdColor = const Color.fromRGBO(224, 80, 118, 1);
   static Color reset = Colors.redAccent;
   static Color red = Colors.red;

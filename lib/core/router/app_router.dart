@@ -4,11 +4,15 @@ import 'package:quran_app/features/azkar/ui/azkar_masaa_screen.dart';
 import 'package:quran_app/features/azkar/ui/azkar_sabah_screen.dart';
 import 'package:quran_app/features/hadith/ui/hadith_screen.dart';
 import 'package:quran_app/features/home/ui/home_screen.dart';
+import 'package:quran_app/features/tasbih/data/model/tasbih_model.dart';
+import 'package:quran_app/features/tasbih/ui/tasbih_details_screen.dart';
+import 'package:quran_app/features/tasbih/ui/tasbih_screen.dart';
 
 import '../../features/splash/ui/splash_screen.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {
+    final argument = settings.arguments;
     switch (settings.name) {
       case Routes.splashScreen:
         return MaterialPageRoute(
@@ -29,6 +33,14 @@ class AppRouter {
       case Routes.azkarSabahScreen:
         return MaterialPageRoute(
           builder: (_) => const AzkarSabahScreen(),
+        );
+      case Routes.tasbihScreen:
+        return MaterialPageRoute(
+          builder: (_) => const TasbihScreen(),
+        );
+      case Routes.tasbihDetailsScreen:
+        return MaterialPageRoute(
+          builder: (_) => TasbihDetailsScreen(tasbih: argument as TasbihModel),
         );
 
       default:

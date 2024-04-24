@@ -1,14 +1,13 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jhijri/_src/_jHijri.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/helper/spacing.dart';
+import 'package:quran_app/core/router/routes.dart';
 import 'package:quran_app/core/theme/colors.dart';
 import 'package:quran_app/core/theme/style.dart';
 
@@ -139,7 +138,7 @@ class HomeScreen extends StatelessWidget {
                       verticalSpace(5),
                       Text(
                         'quran'.tr(),
-                        style: TextStyles.font13WhiteRegular,
+                        style: TextStyles.font12WhiteRegular,
                       )
                     ],
                   ),
@@ -159,7 +158,7 @@ class HomeScreen extends StatelessWidget {
                       verticalSpace(5),
                       Text(
                         'marks'.tr(),
-                        style: TextStyles.font13WhiteRegular,
+                        style: TextStyles.font12WhiteRegular,
                       )
                     ],
                   ),
@@ -171,17 +170,20 @@ class HomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: ColorsManager.primarySwatch,
                       borderRadius: BorderRadius.circular(10.r)),
-                  child: Column(
-                    children: [
-                      verticalSpace(10),
-                      Image.asset('assets/image/tasbih.png',
-                          width: 35.w, height: 35.h),
-                      verticalSpace(5),
-                      Text(
-                        'tasbih'.tr(),
-                        style: TextStyles.font13WhiteRegular,
-                      ),
-                    ],
+                  child: GestureDetector(
+                    onTap: () => context.pushNamed(Routes.tasbihScreen),
+                    child: Column(
+                      children: [
+                        verticalSpace(10),
+                        Image.asset('assets/image/tasbih.png',
+                            width: 35.w, height: 35.h),
+                        verticalSpace(5),
+                        Text(
+                          'tasbih'.tr(),
+                          style: TextStyles.font12WhiteRegular,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -197,7 +199,7 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GestureDetector(
-                  onTap: () => context.pushNamed('azkarSabahScreen'),
+                  onTap: () => context.pushNamed(Routes.azkarSabahScreen),
                   child: Container(
                     height: 70.h,
                     width: 70.w,
@@ -212,7 +214,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(5),
                         Text(
                           'azkarSabah'.tr(),
-                          style: TextStyles.font13WhiteRegular,
+                          style: TextStyles.font12WhiteRegular,
                         ),
                       ],
                     ),
@@ -220,7 +222,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 horizontalSpace(30),
                 GestureDetector(
-                  onTap: () => context.pushNamed('azkarMasaaScreen'),
+                  onTap: () => context.pushNamed(Routes.azkarMasaaScreen),
                   child: Container(
                     height: 70.h,
                     width: 70.w,
@@ -235,7 +237,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(5),
                         Text(
                           'azkarMasaa'.tr(),
-                          style: TextStyles.font13WhiteRegular,
+                          style: TextStyles.font12WhiteRegular,
                         ),
                       ],
                     ),
@@ -243,7 +245,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 horizontalSpace(30),
                 GestureDetector(
-                  onTap: () => context.pushNamed('hadithScreen'),
+                  onTap: () => context.pushNamed(Routes.hadithScreen),
                   child: Container(
                     height: 70.h,
                     width: 70.w,
