@@ -22,22 +22,30 @@ class MyAppBar extends StatelessWidget {
             onPressed: () {
               context.pop();
             },
-            icon: Image.asset('assets/image/arrow.png', width: 30),
+            icon: Image.asset(
+              'assets/image/right-arrow.png',
+              width: 30,
+              color: ColorsManager.white,
+            ),
           ),
           SizedBox(
-            width: 80.w,
+            width: 100.w,
             child: Text(
               title.tr(),
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
-              style: TextStyles.font17WhiteRegular,
+              style: TextStyles.font20WhiteRegular,
             ),
           ),
           IconButton(
             onPressed: () {
               context.pushReplacementNamed('homeScreen');
             },
-            icon: Image.asset('assets/image/home.png', width: 35),
+            icon: Image.asset(
+              'assets/image/black_home.png',
+              width: 30,
+              color: ColorsManager.white,
+            ),
           ),
         ],
       ),

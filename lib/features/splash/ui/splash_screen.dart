@@ -1,7 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quran_app/core/helper/extensions.dart';
+import 'package:quran_app/core/theme/colors.dart';
+import 'package:quran_app/core/theme/style.dart';
 
 import '../../../core/router/routes.dart';
 
@@ -46,20 +49,25 @@ class _SplashScreenState extends State<SplashScreen>
       }),
       builder: (context, snapshot) {
         return Scaffold(
+          backgroundColor: ColorsManager.primary.withOpacity(0.85),
           body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 200.h,
-                  width: 200.w,
+                  height: 250.h,
+                  width: 250.w,
                   child: Lottie.asset(
-                    'assets/image/splash_logo.json',
+                    'assets/image/splash_animation.json',
                     //   fit: BoxFit.contain,color: Colors.white,
                     animate: true,
                     controller: controller,
                   ),
+                ),
+                Text(
+                  'muslim'.tr(),
+                  style: TextStyles.font26WhiteSemiBold,
                 ),
               ],
             ),

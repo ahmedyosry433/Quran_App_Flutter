@@ -168,8 +168,20 @@ class _TasbihDetailsScreenState extends State<TasbihDetailsScreen>
     return Stack(
       children: [
         Container(
-          width: 250.w,
-          height: 250.w,
+          width: widget.tasbih.name.length < 6 ||
+                  widget.tasbih.name.length < 10 ||
+                  widget.tasbih.name.length < 20 ||
+                  widget.tasbih.name.length < 40 ||
+                  widget.tasbih.name.length < 180
+              ? 250.w
+              : 200.w,
+          height: widget.tasbih.name.length < 6 ||
+                  widget.tasbih.name.length < 10 ||
+                  widget.tasbih.name.length < 20 ||
+                  widget.tasbih.name.length < 40 ||
+                  widget.tasbih.name.length < 180
+              ? 250.h
+              : 200.h,
 
           // height: AppSize.s390,
           // width: AppSize.s390,
@@ -187,8 +199,20 @@ class _TasbihDetailsScreenState extends State<TasbihDetailsScreen>
           ),
         ),
         Positioned(
-            top: 120.h,
-            right: 120.w,
+            top: widget.tasbih.name.length < 6 ||
+                    widget.tasbih.name.length < 10 ||
+                    widget.tasbih.name.length < 20 ||
+                    widget.tasbih.name.length < 40 ||
+                    widget.tasbih.name.length < 180
+                ? 120.h
+                : 100.h,
+            right: widget.tasbih.name.length < 6 ||
+                    widget.tasbih.name.length < 10 ||
+                    widget.tasbih.name.length < 20 ||
+                    widget.tasbih.name.length < 40 ||
+                    widget.tasbih.name.length < 180
+                ? 120.w
+                : 95.w,
             child: Text(
               '$counter',
               style: TextStyles.font25BlackSemiBold,

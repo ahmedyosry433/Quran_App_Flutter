@@ -7,6 +7,7 @@ import 'package:quran_app/features/home/ui/home_screen.dart';
 import 'package:quran_app/features/tasbih/data/model/tasbih_model.dart';
 import 'package:quran_app/features/tasbih/ui/tasbih_details_screen.dart';
 import 'package:quran_app/features/tasbih/ui/tasbih_screen.dart';
+import 'package:quran_app/features/quran/ui/quran_screen.dart';
 
 import '../../features/splash/ui/splash_screen.dart';
 
@@ -41,6 +42,10 @@ class AppRouter {
       case Routes.tasbihDetailsScreen:
         return MaterialPageRoute(
           builder: (_) => TasbihDetailsScreen(tasbih: argument as TasbihModel),
+        );
+      case Routes.quranScreen:
+        return MaterialPageRoute(
+          builder: (_) => const QuranScreen(),
         );
 
       default:
