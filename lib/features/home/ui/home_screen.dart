@@ -142,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(5),
                         Text(
                           'quran'.tr(),
-                          style: TextStyles.font12WhiteRegular,
+                          style: TextStyles.font10WhiteRegular,
                         )
                       ],
                     ),
@@ -163,7 +163,7 @@ class HomeScreen extends StatelessWidget {
                       verticalSpace(5),
                       Text(
                         'marks'.tr(),
-                        style: TextStyles.font12WhiteRegular,
+                        style: TextStyles.font10WhiteRegular,
                       )
                     ],
                   ),
@@ -185,7 +185,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(5),
                         Text(
                           'tasbih'.tr(),
-                          style: TextStyles.font12WhiteRegular,
+                          style: TextStyles.font10WhiteRegular,
                         ),
                       ],
                     ),
@@ -219,7 +219,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(5),
                         Text(
                           'azkarSabah'.tr(),
-                          style: TextStyles.font12WhiteRegular,
+                          style: TextStyles.font10WhiteRegular,
                         ),
                       ],
                     ),
@@ -242,7 +242,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(5),
                         Text(
                           'azkarMasaa'.tr(),
-                          style: TextStyles.font12WhiteRegular,
+                          style: TextStyles.font10WhiteRegular,
                         ),
                       ],
                     ),
@@ -265,7 +265,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(5),
                         Text(
                           'hadith'.tr(),
-                          style: TextStyles.font13WhiteRegular,
+                          style: TextStyles.font10WhiteRegular,
                         ),
                       ],
                     ),

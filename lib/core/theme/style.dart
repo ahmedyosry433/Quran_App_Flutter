@@ -52,6 +52,12 @@ class TextStyles {
     fontWeight: FontWeightHelper.regular,
     fontFamily: 'Cairo',
   );
+  static TextStyle font10WhiteRegular = TextStyle(
+    color: ColorsManager.white,
+    fontSize: 10.sp,
+    fontWeight: FontWeightHelper.regular,
+    fontFamily: 'Cairo',
+  );
   static TextStyle font17WhiteRegular = TextStyle(
     color: ColorsManager.white,
     fontSize: 17.sp,

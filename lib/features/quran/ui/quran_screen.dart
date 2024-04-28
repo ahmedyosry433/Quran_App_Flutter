@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/helper/spacing.dart';
 import 'package:quran_app/core/theme/colors.dart';
 import 'package:quran_app/core/theme/style.dart';
@@ -36,47 +37,52 @@ class QuranScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8),
           itemCount: surahs.length,
           itemBuilder: (context, index) =>
-              buildQuranCard(surah: surahs[index])),
+              buildQuranCard(context: context, surah: surahs[index])),
     );
   }
 
-  Widget buildQuranCard({required SurahModel surah}) {
-    return Card(
-      color: ColorsManager.primary.withOpacity(0.35),
-      elevation: 2,
-      child: Padding(
-        padding: EdgeInsets.only(top: 8.h, right: 8.w, bottom: 8.h, left: 8.w),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                SizedBox(
-                    width: 45.w,
-                    height: 45.h,
-                    child: Stack(
-                      alignment: AlignmentDirectional.center,
-                      children: [
-                        Image.asset('assets/image/star.png'),
-                        Positioned(
-                          child: Text('${surah.index}',
-                              style: TextStyles.font16BlackRegular),
-                        ),
-                      ],
-                    )),
-                horizontalSpace(10),
-                Text(
-                  surah.arabic,
-                  style: TextStyles.font16BlackRegular,
-                ),
-              ],
-            ),
-            Column(children: [
-              Text(surah.type, style: TextStyles.font13WhiteRegular),
-              Text('${surah.verseCount} آيه',
-                  style: TextStyles.font13WhiteRegular),
-            ])
-          ],
+  Widget buildQuranCard(
+      {required BuildContext context, required SurahModel surah}) {
+    return GestureDetector(
+      onTap: () => context.pushNamed('surahDetailsScreen', arguments: surah),
+      child: Card(
+        color: ColorsManager.primary.withOpacity(0.35),
+        elevation: 2,
+        child: Padding(
+          padding:
+              EdgeInsets.only(top: 8.h, right: 8.w, bottom: 8.h, left: 8.w),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  SizedBox(
+                      width: 45.w,
+                      height: 45.h,
+                      child: Stack(
+                        alignment: AlignmentDirectional.center,
+                        children: [
+                          Image.asset('assets/image/star.png'),
+                          Positioned(
+                            child: Text('${surah.index}',
+                                style: TextStyles.font16BlackRegular),
+                          ),
+                        ],
+                      )),
+                  horizontalSpace(10),
+                  Text(
+                    surah.arabic,
+                    style: TextStyles.font16BlackRegular,
+                  ),
+                ],
+              ),
+              Column(children: [
+                Text(surah.type, style: TextStyles.font13WhiteRegular),
+                Text('${surah.verseCount} آيه',
+                    style: TextStyles.font13WhiteRegular),
+              ])
+            ],
+          ),
         ),
       ),
     );

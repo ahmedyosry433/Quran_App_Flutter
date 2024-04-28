@@ -7,4 +7,5 @@ class Routes {
   static const String tasbihScreen = 'tasbihScreen';
   static const String tasbihDetailsScreen = 'tasbihDetailsScreen';
   static const String quranScreen = 'quranScreen';
+  static const String surahDetailsScreen = 'surahDetailsScreen';
 }

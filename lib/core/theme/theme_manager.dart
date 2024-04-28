@@ -14,7 +14,7 @@ ThemeData getApplicationTheme() {
         systemNavigationBarColor: ColorsManager.primary.withOpacity(0.85),
         statusBarColor: ColorsManager.primary.withOpacity(0.3),
         statusBarBrightness: Brightness.dark,
-        systemNavigationBarIconBrightness: Brightness.light,
+        // systemNavigationBarIconBrightness: Brightness.light,
         systemNavigationBarDividerColor: ColorsManager.white,
       ),
     ),

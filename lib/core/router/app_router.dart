@@ -4,6 +4,8 @@ import 'package:quran_app/features/azkar/ui/azkar_masaa_screen.dart';
 import 'package:quran_app/features/azkar/ui/azkar_sabah_screen.dart';
 import 'package:quran_app/features/hadith/ui/hadith_screen.dart';
 import 'package:quran_app/features/home/ui/home_screen.dart';
+import 'package:quran_app/features/quran/data/model/quran_model.dart';
+import 'package:quran_app/features/quran/ui/sourah_details_screen.dart';
 import 'package:quran_app/features/tasbih/data/model/tasbih_model.dart';
 import 'package:quran_app/features/tasbih/ui/tasbih_details_screen.dart';
 import 'package:quran_app/features/tasbih/ui/tasbih_screen.dart';
@@ -42,6 +44,10 @@ class AppRouter {
       case Routes.tasbihDetailsScreen:
         return MaterialPageRoute(
           builder: (_) => TasbihDetailsScreen(tasbih: argument as TasbihModel),
+        );
+      case Routes.surahDetailsScreen:
+        return MaterialPageRoute(
+          builder: (_) => SurahDetailsScreen(surah: argument as SurahModel),
         );
       case Routes.quranScreen:
         return MaterialPageRoute(
