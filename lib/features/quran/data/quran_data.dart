@@ -58,7 +58,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓمٓ',
+        text: ' الٓمٓ',
         translation:
             'Əlif, Lam, Mim.(Bəzi surələrin başında yer alan belə hərflərə “Hürufi-müqəttəə” deyilir. Təfsirçilər tərəfindən bu hərflərə müxtəlif mənalar verilmişdir.)',
       ),
@@ -2059,7 +2059,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓمٓ',
+        text: ' الٓمٓ',
         translation: 'Əlif, Lam, Mim!',
       ),
       VerseModel(
@@ -3434,7 +3434,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُوا۟ رَبَّكُمُ ٱلَّذِى خَلَقَكُم مِّن نَّفْسٍ وَٰحِدَةٍ وَخَلَقَ مِنْهَا زَوْجَهَا وَبَثَّ مِنْهُمَا رِجَالًا كَثِيرًا وَنِسَآءً وَٱتَّقُوا۟ ٱللَّهَ ٱلَّذِى تَسَآءَلُونَ بِهِۦ وَٱلْأَرْحَامَ إِنَّ ٱللَّهَ كَانَ عَلَيْكُمْ رَقِيبًا',
+            ' يَٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُوا۟ رَبَّكُمُ ٱلَّذِى خَلَقَكُم مِّن نَّفْسٍ وَٰحِدَةٍ وَخَلَقَ مِنْهَا زَوْجَهَا وَبَثَّ مِنْهُمَا رِجَالًا كَثِيرًا وَنِسَآءً وَٱتَّقُوا۟ ٱللَّهَ ٱلَّذِى تَسَآءَلُونَ بِهِۦ وَٱلْأَرْحَامَ إِنَّ ٱللَّهَ كَانَ عَلَيْكُمْ رَقِيبًا',
         translation:
             'Ey insanlar! Sizi tək bir nəfsdən (Adəmdən) yaradıb, ondan zövcəsini (Həvvanı) xəlq edən və o ikisindən də bir çox kişilər və qadınlar törədən Rəbbinizdən qorxun! Bir-birinizdən (bir şey) istədiyiniz zaman adından istifadə etdiyiniz Allahdan və qohumluq əlaqələrini kəsməkdən çəkinin! Şübhəsiz ki, Allah sizin üzərinizdə gözətçidir.',
       ),
@@ -4662,7 +4662,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ أَوْفُوا۟ بِٱلْعُقُودِ أُحِلَّتْ لَكُم بَهِيمَةُ ٱلْأَنْعَٰمِ إِلَّا مَا يُتْلَىٰ عَلَيْكُمْ غَيْرَ مُحِلِّى ٱلصَّيْدِ وَأَنتُمْ حُرُمٌ إِنَّ ٱللَّهَ يَحْكُمُ مَا يُرِيدُ',
+            ' يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ أَوْفُوا۟ بِٱلْعُقُودِ أُحِلَّتْ لَكُم بَهِيمَةُ ٱلْأَنْعَٰمِ إِلَّا مَا يُتْلَىٰ عَلَيْكُمْ غَيْرَ مُحِلِّى ٱلصَّيْدِ وَأَنتُمْ حُرُمٌ إِنَّ ٱللَّهَ يَحْكُمُ مَا يُرِيدُ',
         translation:
             'Ey iman gətirənlər, əhdləri yerinə yetirin! Siz ehramda ikən ov etməyi halal saymamaq şərtilə (aşağıda) sizə oxunacaq olanlar istisna olmaqla (digər) heyvanlar sizə halal edildi. Şübhəsiz ki, Allah istədiyinə hökm edər.',
       ),
@@ -5511,7 +5511,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱلْحَمْدُ لِلَّهِ ٱلَّذِى خَلَقَ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ وَجَعَلَ ٱلظُّلُمَٰتِ وَٱلنُّورَ ثُمَّ ٱلَّذِينَ كَفَرُوا۟ بِرَبِّهِمْ يَعْدِلُونَ',
+            ' ٱلْحَمْدُ لِلَّهِ ٱلَّذِى خَلَقَ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ وَجَعَلَ ٱلظُّلُمَٰتِ وَٱلنُّورَ ثُمَّ ٱلَّذِينَ كَفَرُوا۟ بِرَبِّهِمْ يَعْدِلُونَ',
         translation:
             'Həmd göyləri və yeri yaradan, zülmətləri və nuru xəlq edən Allaha məxsusdur! (Bu qədər dəlillərdən) sonra kafirlər, (yenə də bütləri) Rəbbinə tay tuturlar.',
       ),
@@ -6672,7 +6672,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓمٓصٓ',
+        text: ' الٓمٓصٓ',
         translation: 'Əlif, Lam, Mim, Sad.',
       ),
       VerseModel(
@@ -8090,7 +8090,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَسْـَٔلُونَكَ عَنِ ٱلْأَنفَالِ قُلِ ٱلْأَنفَالُ لِلَّهِ وَٱلرَّسُولِ فَٱتَّقُوا۟ ٱللَّهَ وَأَصْلِحُوا۟ ذَاتَ بَيْنِكُمْ وَأَطِيعُوا۟ ٱللَّهَ وَرَسُولَهُۥٓ إِن كُنتُم مُّؤْمِنِينَ',
+            ' يَسْـَٔلُونَكَ عَنِ ٱلْأَنفَالِ قُلِ ٱلْأَنفَالُ لِلَّهِ وَٱلرَّسُولِ فَٱتَّقُوا۟ ٱللَّهَ وَأَصْلِحُوا۟ ذَاتَ بَيْنِكُمْ وَأَطِيعُوا۟ ٱللَّهَ وَرَسُولَهُۥٓ إِن كُنتُم مُّؤْمِنِينَ',
         translation:
             'Səndən qənimətlər haqqında soruşurlar. De: “Qənimətlər Allaha və Peyğəmbərə məxsusdur. Ona görə də əgər (həqiqi) möminsinizsə, Allahdan qorxun, aranızı düzəldin (münaqişələrə son verin), Allaha və Onun Peyğəmbərinə itaət edin!”',
       ),
@@ -9532,8 +9532,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓر تِلْكَ ءَايَٰتُ ٱلْكِتَٰبِ ٱلْحَكِيمِ',
+        text: ' الٓر تِلْكَ ءَايَٰتُ ٱلْكِتَٰبِ ٱلْحَكِيمِ',
         translation:
             'Əlif, Lam, Ra. Bunlar, hikmətli Kitabın (Quranın) ayələridir!',
       ),
@@ -10289,7 +10288,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓر كِتَٰبٌ أُحْكِمَتْ ءَايَٰتُهُۥ ثُمَّ فُصِّلَتْ مِن لَّدُنْ حَكِيمٍ خَبِيرٍ',
+            ' الٓر كِتَٰبٌ أُحْكِمَتْ ءَايَٰتُهُۥ ثُمَّ فُصِّلَتْ مِن لَّدُنْ حَكِيمٍ خَبِيرٍ',
         translation:
             'Əlif, Lam, Ra! (Bu Quran) hikmət sahibi və hər şeydən xəbərdar olan Allah tərəfindən ayələri möhkəmləndirilmiş, sonra da izah edilmiş bir kitabdır.',
       ),
@@ -11149,8 +11148,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓر تِلْكَ ءَايَٰتُ ٱلْكِتَٰبِ ٱلْمُبِينِ',
+        text: ' الٓر تِلْكَ ءَايَٰتُ ٱلْكِتَٰبِ ٱلْمُبِينِ',
         translation:
             'Əlif, Lam, Ra! Bu, açıq-aydın Kitabın (Quranın) ayələridir.',
       ),
@@ -11928,7 +11926,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓمٓر تِلْكَ ءَايَٰتُ ٱلْكِتَٰبِ وَٱلَّذِىٓ أُنزِلَ إِلَيْكَ مِن رَّبِّكَ ٱلْحَقُّ وَلَٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يُؤْمِنُونَ',
+            ' الٓمٓر تِلْكَ ءَايَٰتُ ٱلْكِتَٰبِ وَٱلَّذِىٓ أُنزِلَ إِلَيْكَ مِن رَّبِّكَ ٱلْحَقُّ وَلَٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يُؤْمِنُونَ',
         translation:
             'Əlif, Lam, Mim, Ra! Bunlar Kitabın ayələridir. Rəbbindən sənə nazil olan (Quran) haqdır. Lakin insanların çoxu iman gətirməz.',
       ),
@@ -12235,7 +12233,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓر كِتَٰبٌ أَنزَلْنَٰهُ إِلَيْكَ لِتُخْرِجَ ٱلنَّاسَ مِنَ ٱلظُّلُمَٰتِ إِلَى ٱلنُّورِ بِإِذْنِ رَبِّهِمْ إِلَىٰ صِرَٰطِ ٱلْعَزِيزِ ٱلْحَمِيدِ',
+            ' الٓر كِتَٰبٌ أَنزَلْنَٰهُ إِلَيْكَ لِتُخْرِجَ ٱلنَّاسَ مِنَ ٱلظُّلُمَٰتِ إِلَى ٱلنُّورِ بِإِذْنِ رَبِّهِمْ إِلَىٰ صِرَٰطِ ٱلْعَزِيزِ ٱلْحَمِيدِ',
         translation:
             'Əlif, Lam, Ra! (Bu Quran) Rəbbinin izni ilə insanları qaranlıqlardan aydınlığa – yenilməz qüvvət sahibi və şükürə layiq olan Allahın yoluna çıxartmağın üçün sənə nazil etdiyimiz kitabdır.',
       ),
@@ -12599,8 +12597,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓر تِلْكَ ءَايَٰتُ ٱلْكِتَٰبِ وَقُرْءَانٍ مُّبِينٍ',
+        text: ' الٓر تِلْكَ ءَايَٰتُ ٱلْكِتَٰبِ وَقُرْءَانٍ مُّبِينٍ',
         translation:
             'Əlif, Lam, Ra! Bunlar Kitabın və açıq-aydın Quranın ayələridir.',
       ),
@@ -13214,7 +13211,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ أَتَىٰٓ أَمْرُ ٱللَّهِ فَلَا تَسْتَعْجِلُوهُ سُبْحَٰنَهُۥ وَتَعَٰلَىٰ عَمَّا يُشْرِكُونَ',
+            ' أَتَىٰٓ أَمْرُ ٱللَّهِ فَلَا تَسْتَعْجِلُوهُ سُبْحَٰنَهُۥ وَتَعَٰلَىٰ عَمَّا يُشْرِكُونَ',
         translation:
             'Allahın əmri gələcəkdir. Ona görə də onu istəməkdə tələsməyin! Allah onların qoşduqları şəriklərdən uzaq və ucadır.',
       ),
@@ -14108,7 +14105,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ سُبْحَٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًا مِّنَ ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا ٱلَّذِى بَٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ ءَايَٰتِنَآ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ',
+            ' سُبْحَٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًا مِّنَ ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا ٱلَّذِى بَٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ ءَايَٰتِنَآ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ',
         translation:
             'Ayələrimizdən bir qismini göstərmək üçün bəndəsini bir gecə Məscidi-haramdan ətrafını mübarək etdiyimiz Məscidi-əqsaya aparan Allah pak və müqəddəsdir! O, həqiqətən, hər şeyi eşidəndir, görəndir.',
       ),
@@ -14887,7 +14884,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱلْحَمْدُ لِلَّهِ ٱلَّذِىٓ أَنزَلَ عَلَىٰ عَبْدِهِ ٱلْكِتَٰبَ وَلَمْ يَجْعَل لَّهُۥ عِوَجَا',
+            ' ٱلْحَمْدُ لِلَّهِ ٱلَّذِىٓ أَنزَلَ عَلَىٰ عَبْدِهِ ٱلْكِتَٰبَ وَلَمْ يَجْعَل لَّهُۥ عِوَجَا',
         translation:
             'Kitabı (Quranı) bəndəsinə (Mühəmmədə) nazil edən və onda heç bir əyriliyə (nöqsana, ziddiyyətə) yol verməyən Allaha həmd olsun!',
       ),
@@ -15641,7 +15638,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ كٓهيعٓصٓ',
+        text: ' كٓهيعٓصٓ',
         translation: 'Kəf, Hə, Yə, Eyn, Sad!',
       ),
       VerseModel(
@@ -16308,7 +16305,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ طه',
+        text: ' طه',
         translation: 'Ta, Ha!',
       ),
       VerseModel(
@@ -17179,7 +17176,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱقْتَرَبَ لِلنَّاسِ حِسَابُهُمْ وَهُمْ فِى غَفْلَةٍ مُّعْرِضُونَ',
+            ' ٱقْتَرَبَ لِلنَّاسِ حِسَابُهُمْ وَهُمْ فِى غَفْلَةٍ مُّعْرِضُونَ',
         translation:
             'İnsanların hesaba çəkiləcəkləri gün yaxınlaşdı! Onlar isə qəflət içində (haqdan) üz çevirirlər.',
       ),
@@ -17953,7 +17950,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُوا۟ رَبَّكُمْ إِنَّ زَلْزَلَةَ ٱلسَّاعَةِ شَىْءٌ عَظِيمٌ',
+            ' يَٰٓأَيُّهَا ٱلنَّاسُ ٱتَّقُوا۟ رَبَّكُمْ إِنَّ زَلْزَلَةَ ٱلسَّاعَةِ شَىْءٌ عَظِيمٌ',
         translation:
             'Ey insanlar, Rəbbinizdən qorxun! Həqiqətən, qiyamətin sarsıntısı çox dəhşətlidir.',
       ),
@@ -18501,8 +18498,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ',
+        text: ' قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ',
         translation: 'Həqiqətən, möminlər nicat tapmışlar;',
       ),
       VerseModel(
@@ -19262,7 +19258,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ سُورَةٌ أَنزَلْنَٰهَا وَفَرَضْنَٰهَا وَأَنزَلْنَا فِيهَآ ءَايَٰتٍۭ بَيِّنَٰتٍ لَّعَلَّكُمْ تَذَكَّرُونَ',
+            ' سُورَةٌ أَنزَلْنَٰهَا وَفَرَضْنَٰهَا وَأَنزَلْنَا فِيهَآ ءَايَٰتٍۭ بَيِّنَٰتٍ لَّعَلَّكُمْ تَذَكَّرُونَ',
         translation:
             'Bu, nazil etdiyimiz və (hökmlərini sizə) fərz etdiyimiz bir surədir. Bəlkə düşünüb ibrət alasınız deyə onda açıq-aşkar ayələr nazil etdik.',
       ),
@@ -19718,7 +19714,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ تَبَارَكَ ٱلَّذِى نَزَّلَ ٱلْفُرْقَانَ عَلَىٰ عَبْدِهِۦ لِيَكُونَ لِلْعَٰلَمِينَ نَذِيرًا',
+            ' تَبَارَكَ ٱلَّذِى نَزَّلَ ٱلْفُرْقَانَ عَلَىٰ عَبْدِهِۦ لِيَكُونَ لِلْعَٰلَمِينَ نَذِيرًا',
         translation:
             'Aləmləri xəbərdar etsin deyə Fürqanı (Quranı) Öz quluna (Mühəmmədə) nazil edən Allah çox ucadır!',
       ),
@@ -20256,7 +20252,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ طسٓمٓ',
+        text: ' طسٓمٓ',
         translation: 'Ta, Sin, Mim!',
       ),
       VerseModel(
@@ -21576,8 +21572,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ طسٓ تِلْكَ ءَايَٰتُ ٱلْقُرْءَانِ وَكِتَابٍ مُّبِينٍ',
+        text: ' طسٓ تِلْكَ ءَايَٰتُ ٱلْقُرْءَانِ وَكِتَابٍ مُّبِينٍ',
         translation:
             'Ta, Sin! Bu, Quranın və (haqqı) bəyan edən Kitabın ayələridir.',
       ),
@@ -22221,7 +22216,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ طسٓمٓ',
+        text: ' طسٓمٓ',
         translation: 'Ta, Sin, Mim!',
       ),
       VerseModel(
@@ -22840,7 +22835,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓمٓ',
+        text: ' الٓمٓ',
         translation: 'Əlif, Lam, Mim!',
       ),
       VerseModel(
@@ -23326,7 +23321,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓمٓ',
+        text: ' الٓمٓ',
         translation: 'Əlif, Lam, Mim!',
       ),
       VerseModel(
@@ -23747,7 +23742,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓمٓ',
+        text: ' الٓمٓ',
         translation: 'Əlif, Lam, Mim!',
       ),
       VerseModel(
@@ -23989,7 +23984,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ الٓمٓ',
+        text: ' الٓمٓ',
         translation: 'Əlif, Lam, Mim!',
       ),
       VerseModel(
@@ -24201,7 +24196,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَٰٓأَيُّهَا ٱلنَّبِىُّ ٱتَّقِ ٱللَّهَ وَلَا تُطِعِ ٱلْكَٰفِرِينَ وَٱلْمُنَٰفِقِينَ إِنَّ ٱللَّهَ كَانَ عَلِيمًا حَكِيمًا',
+            ' يَٰٓأَيُّهَا ٱلنَّبِىُّ ٱتَّقِ ٱللَّهَ وَلَا تُطِعِ ٱلْكَٰفِرِينَ وَٱلْمُنَٰفِقِينَ إِنَّ ٱللَّهَ كَانَ عَلِيمًا حَكِيمًا',
         translation:
             'Ey Peyğəmbər, Allahdan qorx, kafirlərə və münafiqlərə itaət etmə! Həqiqətən, Allah hər şeyi biləndir, hikmət sahibidir.',
       ),
@@ -24714,7 +24709,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱلْحَمْدُ لِلَّهِ ٱلَّذِى لَهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَلَهُ ٱلْحَمْدُ فِى ٱلْءَاخِرَةِ وَهُوَ ٱلْحَكِيمُ ٱلْخَبِيرُ',
+            ' ٱلْحَمْدُ لِلَّهِ ٱلَّذِى لَهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَلَهُ ٱلْحَمْدُ فِى ٱلْءَاخِرَةِ وَهُوَ ٱلْحَكِيمُ ٱلْخَبِيرُ',
         translation:
             'Həmd göylərdə və yerdə nə varsa, hamısının sahibi olan Allaha məxsusdur. Axirətdə də həmd Ona məxsusdur. O hikmət sahibidir, hər şeydən xəbərdardır.',
       ),
@@ -25098,7 +25093,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱلْحَمْدُ لِلَّهِ فَاطِرِ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ جَاعِلِ ٱلْمَلَٰٓئِكَةِ رُسُلًا أُو۟لِىٓ أَجْنِحَةٍ مَّثْنَىٰ وَثُلَٰثَ وَرُبَٰعَ يَزِيدُ فِى ٱلْخَلْقِ مَا يَشَآءُ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ',
+            ' ٱلْحَمْدُ لِلَّهِ فَاطِرِ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ جَاعِلِ ٱلْمَلَٰٓئِكَةِ رُسُلًا أُو۟لِىٓ أَجْنِحَةٍ مَّثْنَىٰ وَثُلَٰثَ وَرُبَٰعَ يَزِيدُ فِى ٱلْخَلْقِ مَا يَشَآءُ إِنَّ ٱللَّهَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ',
         translation:
             'Göyləri və yeri yaradan, mələkləri ikiqanadlı, üçqanadlı və dördqanadlı elçilər edən Allaha həmd olsun! O, istədiyi qədər çox yaradar. Şübhəsiz ki, Allah hər şeyə qadirdir.',
       ),
@@ -25409,7 +25404,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يسٓ',
+        text: ' يسٓ',
         translation: 'Ya, Sin!',
       ),
       VerseModel(
@@ -25964,7 +25959,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلصَّٰٓفَّٰتِ صَفًّا',
+        text: ' وَٱلصَّٰٓفَّٰتِ صَفًّا',
         translation: 'And olsun səf-səf düzülənlərə,',
       ),
       VerseModel(
@@ -26951,8 +26946,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ صٓ وَٱلْقُرْءَانِ ذِى ٱلذِّكْرِ',
+        text: ' صٓ وَٱلْقُرْءَانِ ذِى ٱلذِّكْرِ',
         translation: 'Sad! Öyüd verən Qurana and olsun!',
       ),
       VerseModel(
@@ -27517,8 +27511,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ تَنزِيلُ ٱلْكِتَٰبِ مِنَ ٱللَّهِ ٱلْعَزِيزِ ٱلْحَكِيمِ',
+        text: ' تَنزِيلُ ٱلْكِتَٰبِ مِنَ ٱللَّهِ ٱلْعَزِيزِ ٱلْحَكِيمِ',
         translation:
             'Bu kitab (Quran) yenilməz qüvvət və hikmət sahibi Allah tərəfindən nazil edilmişdir.',
       ),
@@ -28035,7 +28028,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ حمٓ',
+        text: ' حمٓ',
         translation: 'Ha, Mim!',
       ),
       VerseModel(
@@ -28603,7 +28596,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ حمٓ',
+        text: ' حمٓ',
         translation: 'Ha, Mim!',
       ),
       VerseModel(
@@ -28977,7 +28970,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ حمٓ',
+        text: ' حمٓ',
         translation: 'Ha, Mim!',
       ),
       VerseModel(
@@ -29349,7 +29342,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ حمٓ',
+        text: ' حمٓ',
         translation: 'Ha, Mim!',
       ),
       VerseModel(
@@ -29956,7 +29949,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ حمٓ',
+        text: ' حمٓ',
         translation: 'Ha, Mim!',
       ),
       VerseModel(
@@ -30298,7 +30291,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ حمٓ',
+        text: ' حمٓ',
         translation: 'Ha, Mim!',
       ),
       VerseModel(
@@ -30560,7 +30553,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ حمٓ',
+        text: ' حمٓ',
         translation: 'Ha, Mim!',
       ),
       VerseModel(
@@ -30812,7 +30805,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ أَضَلَّ أَعْمَٰلَهُمْ',
+            ' ٱلَّذِينَ كَفَرُوا۟ وَصَدُّوا۟ عَن سَبِيلِ ٱللَّهِ أَضَلَّ أَعْمَٰلَهُمْ',
         translation:
             'Allah inkar edənlərin və (insanları) Öz yolundan döndərənlərin əməllərini boşa çıxarmışdır.',
       ),
@@ -31082,8 +31075,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا',
+        text: ' إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا',
         translation:
             'Həqiqətən, Biz sənə açıq-aydın bir fəth (zəfər) bəxş etdik ki,',
       ),
@@ -31287,7 +31279,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تُقَدِّمُوا۟ بَيْنَ يَدَىِ ٱللَّهِ وَرَسُولِهِۦ وَٱتَّقُوا۟ ٱللَّهَ إِنَّ ٱللَّهَ سَمِيعٌ عَلِيمٌ',
+            ' يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تُقَدِّمُوا۟ بَيْنَ يَدَىِ ٱللَّهِ وَرَسُولِهِۦ وَٱتَّقُوا۟ ٱللَّهَ إِنَّ ٱللَّهَ سَمِيعٌ عَلِيمٌ',
         translation:
             'Ey iman gətirənlər, Allahın və Peyğəmbərinin önünə keçməyin! Allahdan qorxun! Şübhəsiz ki, Allah hər şeyi eşidəndir, biləndir.',
       ),
@@ -31420,8 +31412,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قٓ وَٱلْقُرْءَانِ ٱلْمَجِيدِ',
+        text: ' قٓ وَٱلْقُرْءَانِ ٱلْمَجِيدِ',
         translation: 'Qaf! Şərəfli Qurana and olsun!',
       ),
       VerseModel(
@@ -31723,7 +31714,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1, 2, 3, 4',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلذَّٰرِيَٰتِ ذَرْوًا فَٱلْحَٰمِلَٰتِ وِقْرًا فَٱلْجَٰرِيَٰتِ يُسْرًا فَٱلْمُقَسِّمَٰتِ أَمْرًا',
+            ' وَٱلذَّٰرِيَٰتِ ذَرْوًا فَٱلْحَٰمِلَٰتِ وِقْرًا فَٱلْجَٰرِيَٰتِ يُسْرًا فَٱلْمُقَسِّمَٰتِ أَمْرًا',
         translation:
             'Toz-torpaq qaldıran küləklərə, yağış yüklü buludlara, rahatlıqla üzüb gedən gəmilərə və işləri bölüşdürən mələklərə and olsun ki,',
       ),
@@ -32073,7 +32064,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلطُّورِ',
+        text: ' وَٱلطُّورِ',
         translation:
             'And olsun dağa! (Təfsirlərdə qeyd olunduğuna görə, bu dağ Həzrət Musanın Allahla danışdığı Mədyəndəki dağdır.)',
       ),
@@ -32373,7 +32364,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلنَّجْمِ إِذَا هَوَىٰ',
+        text: ' وَٱلنَّجْمِ إِذَا هَوَىٰ',
         translation: 'Batmaqda olan ulduza  and olsun ki,',
       ),
       VerseModel(
@@ -32706,8 +32697,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ',
+        text: ' ٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ',
         translation: 'Qiyamət yaxınlaşdı və ay yarıldı.',
       ),
       VerseModel(
@@ -33052,7 +33042,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱلرَّحْمَٰنُ',
+        text: ' ٱلرَّحْمَٰنُ',
         translation: 'Rəhman (mərhəmətli Allah)!',
       ),
       VerseModel(
@@ -33501,8 +33491,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا وَقَعَتِ ٱلْوَاقِعَةُ',
+        text: ' إِذَا وَقَعَتِ ٱلْوَاقِعَةُ',
         translation: 'Qiyamət qopduğu zaman!',
       ),
       VerseModel(
@@ -33992,7 +33981,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ',
+            ' سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ',
         translation:
             'Göylərdə və yerdə nə varsa, hamısı Allahı təsbeh edir. O, qüdrətlidir, hikmət sahibidir.',
       ),
@@ -34204,7 +34193,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قَدْ سَمِعَ ٱللَّهُ قَوْلَ ٱلَّتِى تُجَٰدِلُكَ فِى زَوْجِهَا وَتَشْتَكِىٓ إِلَى ٱللَّهِ وَٱللَّهُ يَسْمَعُ تَحَاوُرَكُمَآ إِنَّ ٱللَّهَ سَمِيعٌۢ بَصِيرٌ',
+            ' قَدْ سَمِعَ ٱللَّهُ قَوْلَ ٱلَّتِى تُجَٰدِلُكَ فِى زَوْجِهَا وَتَشْتَكِىٓ إِلَى ٱللَّهِ وَٱللَّهُ يَسْمَعُ تَحَاوُرَكُمَآ إِنَّ ٱللَّهَ سَمِيعٌۢ بَصِيرٌ',
         translation:
             'Əri haqqında səninlə mübahisə edən və Allaha şikayət edən qadının sözünü Allah eşidir. Allah sizin bir-birinizlə danışığınızı eşidir. Şübhəsiz ki, Allah hər şeyi eşidəndir, görəndir.',
       ),
@@ -34367,7 +34356,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ',
+            ' سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ',
         translation:
             'Göylərdə və yerdə nə varsa, hamısı Allahı təsbeh edir. O, qüdrətlidir, hikmət sahibidir.',
       ),
@@ -34544,7 +34533,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تَتَّخِذُوا۟ عَدُوِّى وَعَدُوَّكُمْ أَوْلِيَآءَ تُلْقُونَ إِلَيْهِم بِٱلْمَوَدَّةِ وَقَدْ كَفَرُوا۟ بِمَا جَآءَكُم مِّنَ ٱلْحَقِّ يُخْرِجُونَ ٱلرَّسُولَ وَإِيَّاكُمْ أَن تُؤْمِنُوا۟ بِٱللَّهِ رَبِّكُمْ إِن كُنتُمْ خَرَجْتُمْ جِهَٰدًا فِى سَبِيلِى وَٱبْتِغَآءَ مَرْضَاتِى تُسِرُّونَ إِلَيْهِم بِٱلْمَوَدَّةِ وَأَنَا۠ أَعْلَمُ بِمَآ أَخْفَيْتُمْ وَمَآ أَعْلَنتُمْ وَمَن يَفْعَلْهُ مِنكُمْ فَقَدْ ضَلَّ سَوَآءَ ٱلسَّبِيلِ',
+            ' يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا تَتَّخِذُوا۟ عَدُوِّى وَعَدُوَّكُمْ أَوْلِيَآءَ تُلْقُونَ إِلَيْهِم بِٱلْمَوَدَّةِ وَقَدْ كَفَرُوا۟ بِمَا جَآءَكُم مِّنَ ٱلْحَقِّ يُخْرِجُونَ ٱلرَّسُولَ وَإِيَّاكُمْ أَن تُؤْمِنُوا۟ بِٱللَّهِ رَبِّكُمْ إِن كُنتُمْ خَرَجْتُمْ جِهَٰدًا فِى سَبِيلِى وَٱبْتِغَآءَ مَرْضَاتِى تُسِرُّونَ إِلَيْهِم بِٱلْمَوَدَّةِ وَأَنَا۠ أَعْلَمُ بِمَآ أَخْفَيْتُمْ وَمَآ أَعْلَنتُمْ وَمَن يَفْعَلْهُ مِنكُمْ فَقَدْ ضَلَّ سَوَآءَ ٱلسَّبِيلِ',
         translation:
             'Ey iman gətirənlər! Mənim düşmənimi də, öz düşməninizi də dost tutmayın! Siz onlara sevgi ilə yanaşırsınız. Halbuki onlar sizə gələn haqqı inkar edib Rəbbiniz olan Allaha iman gətirdiyinizə görə Peyğəmbəri və sizi yurdunuzdan çıxartdılar. Mənim yolumda və rizamı istəyərək cihada çıxdığınız halda ürəyinizdə onlara qarşı sevgi bəsləyirsiniz?! Mən sizin gizli saxladıqlarınızı da, aşkar etdiklərinizi də yaxşı bilirəm. Sizdən kim bunu edərsə, o, doğru yoldan azmış olar.',
       ),
@@ -34644,7 +34633,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ',
+            ' سَبَّحَ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ',
         translation:
             'Göylərdə və yerdə nə varsa, hamısı Allahı təsbeh edir. O, qüdrətlidir, hikmət sahibidir.',
       ),
@@ -34750,7 +34739,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ٱلْمَلِكِ ٱلْقُدُّوسِ ٱلْعَزِيزِ ٱلْحَكِيمِ',
+            ' يُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ٱلْمَلِكِ ٱلْقُدُّوسِ ٱلْعَزِيزِ ٱلْحَكِيمِ',
         translation:
             'Göylərdə və yerdə nə varsa, hamısı hökmran, müqəddəs, qüdrətli və hikmət sahibi olan Allahı təsbeh edir.',
       ),
@@ -34836,7 +34825,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا جَآءَكَ ٱلْمُنَٰفِقُونَ قَالُوا۟ نَشْهَدُ إِنَّكَ لَرَسُولُ ٱللَّهِ وَٱللَّهُ يَعْلَمُ إِنَّكَ لَرَسُولُهُۥ وَٱللَّهُ يَشْهَدُ إِنَّ ٱلْمُنَٰفِقِينَ لَكَٰذِبُونَ',
+            ' إِذَا جَآءَكَ ٱلْمُنَٰفِقُونَ قَالُوا۟ نَشْهَدُ إِنَّكَ لَرَسُولُ ٱللَّهِ وَٱللَّهُ يَعْلَمُ إِنَّكَ لَرَسُولُهُۥ وَٱللَّهُ يَشْهَدُ إِنَّ ٱلْمُنَٰفِقِينَ لَكَٰذِبُونَ',
         translation:
             'Münafiqlər sənin yanına gəldikləri zaman: “Biz şahidlik edirik ki, həqiqətən, sən Allahın Peyğəmbərisən!” - dedilər. Allah da bilir ki, sən Onun Peyğəmbərisən. Allah münafiqlərin yalançı olduqlarına şahidlik edir.',
       ),
@@ -34922,7 +34911,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ لَهُ ٱلْمُلْكُ وَلَهُ ٱلْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ',
+            ' يُسَبِّحُ لِلَّهِ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ لَهُ ٱلْمُلْكُ وَلَهُ ٱلْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ',
         translation:
             'Göylərdə və yerdə nə varsa, hamısı Allahı təsbeh edir. Hökmranlıq da, həmd də Ona məxsusdur. O, hər şeyə qadirdir.',
       ),
@@ -35056,7 +35045,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَٰٓأَيُّهَا ٱلنَّبِىُّ إِذَا طَلَّقْتُمُ ٱلنِّسَآءَ فَطَلِّقُوهُنَّ لِعِدَّتِهِنَّ وَأَحْصُوا۟ ٱلْعِدَّةَ وَٱتَّقُوا۟ ٱللَّهَ رَبَّكُمْ لَا تُخْرِجُوهُنَّ مِنۢ بُيُوتِهِنَّ وَلَا يَخْرُجْنَ إِلَّآ أَن يَأْتِينَ بِفَٰحِشَةٍ مُّبَيِّنَةٍ وَتِلْكَ حُدُودُ ٱللَّهِ وَمَن يَتَعَدَّ حُدُودَ ٱللَّهِ فَقَدْ ظَلَمَ نَفْسَهُۥ لَا تَدْرِى لَعَلَّ ٱللَّهَ يُحْدِثُ بَعْدَ ذَٰلِكَ أَمْرًا',
+            ' يَٰٓأَيُّهَا ٱلنَّبِىُّ إِذَا طَلَّقْتُمُ ٱلنِّسَآءَ فَطَلِّقُوهُنَّ لِعِدَّتِهِنَّ وَأَحْصُوا۟ ٱلْعِدَّةَ وَٱتَّقُوا۟ ٱللَّهَ رَبَّكُمْ لَا تُخْرِجُوهُنَّ مِنۢ بُيُوتِهِنَّ وَلَا يَخْرُجْنَ إِلَّآ أَن يَأْتِينَ بِفَٰحِشَةٍ مُّبَيِّنَةٍ وَتِلْكَ حُدُودُ ٱللَّهِ وَمَن يَتَعَدَّ حُدُودَ ٱللَّهِ فَقَدْ ظَلَمَ نَفْسَهُۥ لَا تَدْرِى لَعَلَّ ٱللَّهَ يُحْدِثُ بَعْدَ ذَٰلِكَ أَمْرًا',
         translation:
             'Ey Peyğəmbər! Qadınları boşayacağınız zaman onları gözləmə müddətləri ərzində boşayın və gözləmə müddətini hesablayın! Rəbbiniz olan Allahdan qorxun və açıq-aşkar bir əxlaqsızlıq etmələri istisna olmaqla, onları (gözləmə müddəti ərzində) evlərindən çıxartmayın, özləri də çıxmasınlar! Bu, Allahın qoyduğu hüdudlardır. Kim Allahın hüdudlarını aşarsa, özünə zülm etmiş olar. Sən bilə bilməzsən. Ola bilsin ki, Allah bundan sonra bir çıxış yolu ortaya qoyar (onları barışdırar).',
       ),
@@ -35148,7 +35137,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَٰٓأَيُّهَا ٱلنَّبِىُّ لِمَ تُحَرِّمُ مَآ أَحَلَّ ٱللَّهُ لَكَ تَبْتَغِى مَرْضَاتَ أَزْوَٰجِكَ وَٱللَّهُ غَفُورٌ رَّحِيمٌ',
+            ' يَٰٓأَيُّهَا ٱلنَّبِىُّ لِمَ تُحَرِّمُ مَآ أَحَلَّ ٱللَّهُ لَكَ تَبْتَغِى مَرْضَاتَ أَزْوَٰجِكَ وَٱللَّهُ غَفُورٌ رَّحِيمٌ',
         translation:
             'Ey Peyğəmbər! Zövcələrin (səndən) razı qalsınlar deyə Allahın sənə halal etdiyini nə üçün özünə haram edirsən? Allah bağışlayandır, rəhmlidir.',
       ),
@@ -35241,7 +35230,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ تَبَٰرَكَ ٱلَّذِى بِيَدِهِ ٱلْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ',
+            ' تَبَٰرَكَ ٱلَّذِى بِيَدِهِ ٱلْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ',
         translation:
             'Hökmranlıq əlində olan Allah nə qədər ucadır! O, hər şeyə qadirdir.',
       ),
@@ -35455,8 +35444,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ نٓ وَٱلْقَلَمِ وَمَا يَسْطُرُونَ',
+        text: ' نٓ وَٱلْقَلَمِ وَمَا يَسْطُرُونَ',
         translation: 'Nun! Qələmə və (qələmlə) yazdıqlarına and olsun ki,',
       ),
       VerseModel(
@@ -35764,7 +35752,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱلْحَآقَّةُ',
+        text: ' ٱلْحَآقَّةُ',
         translation: 'Haqq olan qiyamət!',
       ),
       VerseModel(
@@ -36054,8 +36042,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ سَأَلَ سَآئِلٌۢ بِعَذَابٍ وَاقِعٍ',
+        text: ' سَأَلَ سَآئِلٌۢ بِعَذَابٍ وَاقِعٍ',
         translation: 'Sual verən bir nəfər baş verəcək əzab haqqında soruşdu.',
       ),
       VerseModel(
@@ -36304,7 +36291,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِنَّآ أَرْسَلْنَا نُوحًا إِلَىٰ قَوْمِهِۦٓ أَنْ أَنذِرْ قَوْمَكَ مِن قَبْلِ أَن يَأْتِيَهُمْ عَذَابٌ أَلِيمٌ',
+            ' إِنَّآ أَرْسَلْنَا نُوحًا إِلَىٰ قَوْمِهِۦٓ أَنْ أَنذِرْ قَوْمَكَ مِن قَبْلِ أَن يَأْتِيَهُمْ عَذَابٌ أَلِيمٌ',
         translation:
             'Biz ağrılı-acılı bir əzab gəlməmişdən əvvəl qövmünü xəbərdar etsin deyə Nuhu öz qövmünə göndərdik.',
       ),
@@ -36486,7 +36473,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ أُوحِىَ إِلَىَّ أَنَّهُ ٱسْتَمَعَ نَفَرٌ مِّنَ ٱلْجِنِّ فَقَالُوٓا۟ إِنَّا سَمِعْنَا قُرْءَانًا عَجَبًا',
+            ' قُلْ أُوحِىَ إِلَىَّ أَنَّهُ ٱسْتَمَعَ نَفَرٌ مِّنَ ٱلْجِنِّ فَقَالُوٓا۟ إِنَّا سَمِعْنَا قُرْءَانًا عَجَبًا',
         translation:
             '(Ey Peyğəmbər!) De: “Cinlərdən bir dəstənin (oxuduğum Quranı) dinləyib belə dedikləri mənə vəhy olundu: “Biz heyrətamiz bir Quran eşitdik.',
       ),
@@ -36684,8 +36671,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَٰٓأَيُّهَا ٱلْمُزَّمِّلُ',
+        text: ' يَٰٓأَيُّهَا ٱلْمُزَّمِّلُ',
         translation:
             'Ey örtünüb bürünən! (İlk vəhy gəldikdən sonra Həzrət Peyğəmbər Həzrət Cəbraili əsil surətində görmüş və qorxudan bədəni tir-tir titrəmişdi. Buna görə də birbaşa evinə qayıtmış və zövcəsi Xədicəyə: “Mənim üstümü örtün!” - demişdi. Bu hadisədən sonra Cəbrail təkrar ona vəhy gətirərək yuxarıdakı ayə ilə xitab etmişdi.)',
       ),
@@ -36813,8 +36799,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ يَٰٓأَيُّهَا ٱلْمُدَّثِّرُ',
+        text: ' يَٰٓأَيُّهَا ٱلْمُدَّثِّرُ',
         translation: 'Ey örtüsünə bürünən (Peyğəmbər)!',
       ),
       VerseModel(
@@ -37105,8 +37090,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ لَآ أُقْسِمُ بِيَوْمِ ٱلْقِيَٰمَةِ',
+        text: ' لَآ أُقْسِمُ بِيَوْمِ ٱلْقِيَٰمَةِ',
         translation: 'And içirəm qiyamət gününə!',
       ),
       VerseModel(
@@ -37325,7 +37309,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ هَلْ أَتَىٰ عَلَى ٱلْإِنسَٰنِ حِينٌ مِّنَ ٱلدَّهْرِ لَمْ يَكُن شَيْـًٔا مَّذْكُورًا',
+            ' هَلْ أَتَىٰ عَلَى ٱلْإِنسَٰنِ حِينٌ مِّنَ ٱلدَّهْرِ لَمْ يَكُن شَيْـًٔا مَّذْكُورًا',
         translation:
             'İnsanın xatırlanmağa layiq olmadığı uzun bir müddət ötüb-keçmədimi?!',
       ),
@@ -37538,7 +37522,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلْمُرْسَلَٰتِ عُرْفًا',
+        text: ' وَٱلْمُرْسَلَٰتِ عُرْفًا',
         translation:
             'And olsun bir-birinin ardınca göndərilənlərə (küləklərə)!',
       ),
@@ -37803,7 +37787,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ عَمَّ يَتَسَآءَلُونَ',
+        text: ' عَمَّ يَتَسَآءَلُونَ',
         translation: 'Onlar bir-birindən nə haqqında soruşurlar?',
       ),
       VerseModel(
@@ -38022,7 +38006,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلنَّٰزِعَٰتِ غَرْقًا',
+        text: ' وَٱلنَّٰزِعَٰتِ غَرْقًا',
         translation: 'And olsun (kafirlərin canlarını) zorla çəkib alanlara!',
       ),
       VerseModel(
@@ -38272,8 +38256,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1, 2',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ عَبَسَ وَتَوَلَّىٰٓ أَن جَآءَهُ ٱلْأَعْمَىٰ',
+        text: ' عَبَسَ وَتَوَلَّىٰٓ أَن جَآءَهُ ٱلْأَعْمَىٰ',
         translation:
             'Kor adam yanına gəldiyinə görə o qaşqabağını töküb üzünü çevirdi.',
       ),
@@ -38475,8 +38458,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا ٱلشَّمْسُ كُوِّرَتْ',
+        text: ' إِذَا ٱلشَّمْسُ كُوِّرَتْ',
         translation: 'Günəş sarınıb büküləcəyi zaman,',
       ),
       VerseModel(
@@ -38628,8 +38610,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا ٱلسَّمَآءُ ٱنفَطَرَتْ',
+        text: ' إِذَا ٱلسَّمَآءُ ٱنفَطَرَتْ',
         translation: 'Göy yarılacağı zaman,',
       ),
       VerseModel(
@@ -38734,7 +38715,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَيْلٌ لِّلْمُطَفِّفِينَ',
+        text: ' وَيْلٌ لِّلْمُطَفِّفِينَ',
         translation: 'Çəkidə və ölçüdə aldadanların vay halına!',
       ),
       VerseModel(
@@ -38939,8 +38920,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا ٱلسَّمَآءُ ٱنشَقَّتْ',
+        text: ' إِذَا ٱلسَّمَآءُ ٱنشَقَّتْ',
         translation: 'Göy yarılacağı,',
       ),
       VerseModel(
@@ -39080,8 +39060,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلسَّمَآءِ ذَاتِ ٱلْبُرُوجِ',
+        text: ' وَٱلسَّمَآءِ ذَاتِ ٱلْبُرُوجِ',
         translation: 'And olsun içində bürclər olan göyə!',
       ),
       VerseModel(
@@ -39207,8 +39186,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلسَّمَآءِ وَٱلطَّارِقِ',
+        text: ' وَٱلسَّمَآءِ وَٱلطَّارِقِ',
         translation: 'And olsun göyə və tariqə (gecə yolçusuna)!',
       ),
       VerseModel(
@@ -39305,8 +39283,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ سَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى',
+        text: ' سَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى',
         translation: 'Ən uca olan Rəbbinin adını təsbeh et!',
       ),
       VerseModel(
@@ -39410,8 +39387,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَٰشِيَةِ',
+        text: ' هَلْ أَتَىٰكَ حَدِيثُ ٱلْغَٰشِيَةِ',
         translation:
             '(Ey Peyğəmbər!) Hər tərəfi bürüyənin (qiyamətin) xəbəri sənə gəlib çatdımı?!',
       ),
@@ -39553,7 +39529,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلْفَجْرِ',
+        text: ' وَٱلْفَجْرِ',
         translation: 'And olsun dan yerinə!',
       ),
       VerseModel(
@@ -39723,8 +39699,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ لَآ أُقْسِمُ بِهَٰذَا ٱلْبَلَدِ',
+        text: ' لَآ أُقْسِمُ بِهَٰذَا ٱلْبَلَدِ',
         translation: 'And içirəm bu şəhərə (Məkkəyə)!',
       ),
       VerseModel(
@@ -39832,7 +39807,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلشَّمْسِ وَضُحَىٰهَا',
+        text: ' وَٱلشَّمْسِ وَضُحَىٰهَا',
         translation: 'And olsun günəşə və onun aydınlığına!',
       ),
       VerseModel(
@@ -39917,8 +39892,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلَّيْلِ إِذَا يَغْشَىٰ',
+        text: ' وَٱلَّيْلِ إِذَا يَغْشَىٰ',
         translation: 'And olsun (qaranlığı ilə ətrafı) bürüməkdə olan gecəyə!',
       ),
       VerseModel(
@@ -40037,7 +40011,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلضُّحَىٰ',
+        text: ' وَٱلضُّحَىٰ',
         translation: 'And olsun səhərə!',
       ),
       VerseModel(
@@ -40103,8 +40077,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ',
+        text: ' أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ',
         translation: 'Sənin sinəni açıb genişlətmədikmi?!',
       ),
       VerseModel(
@@ -40208,8 +40181,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ',
+        text: ' ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ',
         translation: 'Yaradan Rəbbinin adı ilə oxu!',
       ),
       VerseModel(
@@ -40353,7 +40325,7 @@ final surahs = <SurahModel>[
       VerseModel(
         number: '1',
         text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ لَمْ يَكُنِ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَٰبِ وَٱلْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ ٱلْبَيِّنَةُ',
+            ' لَمْ يَكُنِ ٱلَّذِينَ كَفَرُوا۟ مِنْ أَهْلِ ٱلْكِتَٰبِ وَٱلْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ ٱلْبَيِّنَةُ',
         translation:
             'Kitab əhlindən və müşriklərdən haq­qı inkar edənlər özlərinə açıq-aydın dəlil gələnə qədər (küfrdən) ayrılmadılar.',
       ),
@@ -40414,8 +40386,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا',
+        text: ' إِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا',
         translation: 'Yer şiddətlə titrəyəcəyi zaman,',
       ),
       VerseModel(
@@ -40469,7 +40440,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلْعَٰدِيَٰتِ ضَبْحًا',
+        text: ' وَٱلْعَٰدِيَٰتِ ضَبْحًا',
         translation: 'And olsun tövşüyə-tövşüyə qaçan atlara!',
       ),
       VerseModel(
@@ -40535,7 +40506,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ٱلْقَارِعَةُ',
+        text: ' ٱلْقَارِعَةُ',
         translation: 'Qorxuya salan (qiyamət)!',
       ),
       VerseModel(
@@ -40599,8 +40570,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ أَلْهَىٰكُمُ ٱلتَّكَاثُرُ',
+        text: ' أَلْهَىٰكُمُ ٱلتَّكَاثُرُ',
         translation: 'Çoxluqla öyünmək sizin başınızı o qədər qatdı ki,',
       ),
       VerseModel(
@@ -40653,7 +40623,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلْعَصْرِ',
+        text: ' وَٱلْعَصْرِ',
         translation: 'And olsun axşam çağına!',
       ),
       VerseModel(
@@ -40679,8 +40649,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ',
+        text: ' وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ',
         translation: 'Hər bir qeybət edən və tənə vuranın vay halına!',
       ),
       VerseModel(
@@ -40734,8 +40703,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَٰبِ ٱلْفِيلِ',
+        text: ' أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَٰبِ ٱلْفِيلِ',
         translation:
             'Rəbbinin fil sahiblərinə nə etdiyini görmədinmi?! (Bu ayədə Kəbəni yıxmaq məqsədilə Məkkəyə hücum edən Əbrəhə və onun fillərdən ibarət olan ordusunun məhv edilməsindən bəhs edilir.)',
       ),
@@ -40770,7 +40738,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ لِإِيلَٰفِ قُرَيْشٍ',
+        text: ' لِإِيلَٰفِ قُرَيْشٍ',
         translation:
             'Qüreyşə asanlaşdırıldığı üçün, (Qüreyş qəbiləsi Kəbənin idarəçiliyinə və təmizliyinə nəzarət etdikləri üçün bütün ərəb qəbilələri tərəfindən böyük hörmət görürdülər. Buna görə də onlar rahat, təhlükəsiz və sərbəst bir şəkildə Taifə, Yəmənə və Şama ticarət səfərləri edə bilirdilər. Burada Allah-Təala, onlara verdiyi bu neməti xatırlatmaqdadır.)',
       ),
@@ -40801,8 +40769,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ أَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ',
+        text: ' أَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ',
         translation: 'Haqq-hesab gününü yalan hesab edəni gördünmü?!',
       ),
       VerseModel(
@@ -40846,8 +40813,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِنَّآ أَعْطَيْنَٰكَ ٱلْكَوْثَرَ',
+        text: ' إِنَّآ أَعْطَيْنَٰكَ ٱلْكَوْثَرَ',
         translation:
             '(Ey Peyğəmbər!) Biz sənə Kövsəri verdik.  (“Kövsər” kəlməsinə “cənnətdəki kövsər hovuzu, bol nemətlər, Quran, elm və şərəf” kimi mənalar verilmişdir.)',
       ),
@@ -40872,8 +40838,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ يَٰٓأَيُّهَا ٱلْكَٰفِرُونَ',
+        text: ' قُلْ يَٰٓأَيُّهَا ٱلْكَٰفِرُونَ',
         translation: 'De: “Ey kafirlər!',
       ),
       VerseModel(
@@ -40912,8 +40877,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ',
+        text: ' إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ',
         translation: 'Allahın köməyi və fəth (zəfəri) gəldiyi zaman,',
       ),
       VerseModel(
@@ -40940,8 +40904,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ تَبَّتْ يَدَآ أَبِى لَهَبٍ وَتَبَّ',
+        text: ' تَبَّتْ يَدَآ أَبِى لَهَبٍ وَتَبَّ',
         translation: 'Əbu Ləhəbin əlləri qurusun, qurudu da!',
       ),
       VerseModel(
@@ -40975,7 +40938,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text: 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ هُوَ ٱللَّهُ أَحَدٌ',
+        text: ' قُلْ هُوَ ٱللَّهُ أَحَدٌ',
         translation: 'De: “O Allah təkdir!',
       ),
       VerseModel(
@@ -41004,8 +40967,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ',
+        text: ' قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ',
         translation: 'De: “Sığınıram sübhün Rəbbinə,',
       ),
       VerseModel(
@@ -41039,8 +41001,7 @@ final surahs = <SurahModel>[
     verses: <VerseModel>[
       VerseModel(
         number: '1',
-        text:
-            'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ',
+        text: ' قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ',
         translation: 'De: “Sığınıram insanların Rəbbinə,',
       ),
       VerseModel(

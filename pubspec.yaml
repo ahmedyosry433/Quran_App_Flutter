@@ -85,6 +85,9 @@ flutter:
     - family: Quran
       fonts:
         - asset: assets/fonts/QuranSurah1-mLKO5.ttf
+    - family: QuranKarim
+      fonts:
+        - asset: assets/fonts/Al Qalam Quran Majeed Web Regular.ttf
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf

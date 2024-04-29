@@ -7,6 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jhijri/_src/_jHijri.dart';
 import 'package:lottie/lottie.dart';
+import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/helper/spacing.dart';
 import 'package:quran_app/core/router/routes.dart';
@@ -73,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '${jHijri.day}-',
+                      '${jHijri.day.toArabicNumbers}-',
                       style: TextStyles.font18BlackRegular,
                     ),
                     Text(
@@ -81,7 +82,7 @@ class HomeScreen extends StatelessWidget {
                       style: TextStyles.font18BlackRegular,
                     ),
                     Text(
-                      '-${jHijri.year}',
+                      '-${jHijri.year.toArabicNumbers}',
                       style: TextStyles.font18BlackRegular,
                     ),
                   ],
