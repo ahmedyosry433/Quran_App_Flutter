@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/theme/colors.dart';
 import 'package:quran_app/core/theme/style.dart';
 import 'package:quran_app/features/azkar/data/models/azkar_model.dart';
@@ -22,13 +23,9 @@ class _AzkarWidgetState extends State<AzkarWidget> {
   void initState() {
     azkarCount = widget.azkar.count;
     super.initState();
-    // _vib();
+
     super.initState();
   }
-  // Future<void> _vib() async{
-  //   var appPreferences = getIt.get<AppPreferences>();
-  //   vibStatus = await appPreferences.getVibrateStatus();
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -50,13 +47,6 @@ class _AzkarWidgetState extends State<AzkarWidget> {
                           azkarCount -= 1;
                           if (azkarCount == 0) {
                             color = ColorsManager.grey;
-                            //   if(vibStatus){
-                            //     Vibration.vibrate(duration: 100);
-                            //   }
-                            // }else{
-                            //   if(vibStatus){
-                            //     Vibration.vibrate(duration: 20);
-                            //   }
                           }
                         });
                       }
@@ -74,7 +64,7 @@ class _AzkarWidgetState extends State<AzkarWidget> {
                     borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Text(
-                    "$azkarCount",
+                    azkarCount.toArabicNumbers,
                     style: TextStyles.font14WhiteMedium,
                   ),
                 ),

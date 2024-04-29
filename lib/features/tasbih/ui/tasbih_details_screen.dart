@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/helper/spacing.dart';
 import 'package:quran_app/core/theme/colors.dart';
 import 'package:quran_app/core/theme/style.dart';
@@ -130,7 +131,7 @@ class _TasbihDetailsScreenState extends State<TasbihDetailsScreen>
                           width: 35,
                         ),
                         Text(
-                          '${widget.tasbih.counter}',
+                          widget.tasbih.counter.toArabicNumbers,
                           style: TextStyles.font20WhiteSemiBold,
                         ),
                       ],
@@ -149,7 +150,7 @@ class _TasbihDetailsScreenState extends State<TasbihDetailsScreen>
                         ),
                         horizontalSpace(0),
                         Text(
-                          '$cycle',
+                          cycle.toArabicNumbers,
                           style: TextStyles.font20WhiteSemiBold,
                         ),
                       ],
@@ -214,7 +215,7 @@ class _TasbihDetailsScreenState extends State<TasbihDetailsScreen>
                 ? 120.w
                 : 95.w,
             child: Text(
-              '$counter',
+              counter.toArabicNumbers,
               style: TextStyles.font25BlackSemiBold,
             ))
       ],
@@ -255,7 +256,7 @@ class _TasbihDetailsScreenState extends State<TasbihDetailsScreen>
             } else {}
           },
           child: Text(
-            '$counter',
+            counter.toArabicNumbers,
             //AppStrings.tasbihCounter,
             style: TextStyle(
               color: ColorsManager.white,

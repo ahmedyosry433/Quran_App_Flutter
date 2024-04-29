@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/helper/spacing.dart';
 import 'package:quran_app/core/theme/colors.dart';
@@ -64,7 +65,7 @@ class QuranScreen extends StatelessWidget {
                         children: [
                           Image.asset('assets/image/star.png'),
                           Positioned(
-                            child: Text('${surah.index}',
+                            child: Text(surah.index.toArabicNumbers,
                                 style: TextStyles.font16BlackRegular),
                           ),
                         ],

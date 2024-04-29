@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/helper/spacing.dart';
 
@@ -97,7 +98,7 @@ class TasbihScreen extends StatelessWidget {
                               : ColorsManager.black45),
                     ),
                     child: Center(
-                      child: Text('${tasbih.counter}',
+                      child: Text(tasbih.counter.toArabicNumbers,
                           textAlign: TextAlign.center,
                           style: TextStyles.font13WhiteRegular),
                     ),

@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/helper/spacing.dart';
 import 'package:quran_app/core/theme/colors.dart';
 import 'package:quran_app/core/theme/style.dart';
@@ -53,7 +54,7 @@ class HadithScreen extends StatelessWidget {
                   shape: BoxShape.circle,
                 ),
                 child: Text(
-                  "${hadith.id}".tr(),
+                  hadith.id.toArabicNumbers.tr(),
                   style: TextStyles.font16BlackRegular,
                   textAlign: TextAlign.center,
                 ),
