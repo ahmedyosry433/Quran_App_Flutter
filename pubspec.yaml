@@ -82,6 +82,9 @@ flutter:
     - family: Cairo
       fonts:
         - asset: assets/fonts/Cairo-Regular-BF643384ef31630.ttf
+    - family: Quran
+      fonts:
+        - asset: assets/fonts/QuranSurah1-mLKO5.ttf
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
