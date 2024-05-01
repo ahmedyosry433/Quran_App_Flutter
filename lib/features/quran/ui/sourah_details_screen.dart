@@ -1,11 +1,10 @@
-import 'package:easy_localization/easy_localization.dart';
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/theme/colors.dart';
 import 'package:quran_app/core/theme/style.dart';
-import 'package:quran_app/core/widgets/my_appbar.dart';
 import 'package:quran_app/features/quran/data/model/quran_model.dart';
 
 class SurahDetailsScreen extends StatelessWidget {

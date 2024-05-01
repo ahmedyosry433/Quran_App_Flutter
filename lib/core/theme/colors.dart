@@ -4,7 +4,7 @@ class ColorsManager {
   static Color primarySwatch = const Color.fromARGB(255, 231, 177, 61);
   // static Color primarySwatch = const Color.fromARGB(255, 175, 130, 33);
   static Color primary = const Color.fromARGB(255, 218, 180, 100);
-  static Color lighterprimary = Color.fromARGB(255, 250, 241, 221);
+  static Color lighterprimary = const Color.fromARGB(255, 250, 241, 221);
   // static Color primary = const Color.fromARGB(255, 201, 163, 82);
   static Color splash = Colors.deepPurpleAccent;
   static Color ihdaaSignatureBoard = const Color.fromRGBO(57, 39, 59, 1);
