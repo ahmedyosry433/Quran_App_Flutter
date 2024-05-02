@@ -17,7 +17,7 @@ class QuranScreen extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(50.h),
-        child: MyAppBar(title: 'quran'),
+        child: MyAppBar(title: 'quran',),
       ),
       body: Container(
           decoration: const BoxDecoration(

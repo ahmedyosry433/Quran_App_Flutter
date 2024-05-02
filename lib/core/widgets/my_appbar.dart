@@ -13,6 +13,7 @@ class MyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      clipBehavior: Clip.hardEdge,
       backgroundColor: ColorsManager.primary.withOpacity(0.85),
       automaticallyImplyLeading: false,
       title: Row(
@@ -20,11 +21,13 @@ class MyAppBar extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              context.pop();
+              title == '' ? Scaffold.of(context).openDrawer() : context.pop();
             },
             icon: Image.asset(
-              'assets/image/right-arrow.png',
-              width: 30,
+              title == ''
+                  ? 'assets/image/quran_icon.png'
+                  : 'assets/image/arrow.png',
+              width: title == '' ? 35.w : 30.w,
               color: ColorsManager.white,
             ),
           ),
@@ -39,11 +42,15 @@ class MyAppBar extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              context.pushReplacementNamed('homeScreen');
+              title == ''
+                  ? Scaffold.of(context).openDrawer()
+                  : context.pushReplacementNamed('homeScreen');
             },
             icon: Image.asset(
-              'assets/image/black_home.png',
-              width: 30,
+              title == ''
+                  ? 'assets/image/menu.png'
+                  : 'assets/image/black_home.png',
+              width: 30.w,
               color: ColorsManager.white,
             ),
           ),

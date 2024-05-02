@@ -5,6 +5,7 @@ import 'package:lottie/lottie.dart';
 import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/theme/colors.dart';
 import 'package:quran_app/core/theme/style.dart';
+import 'package:quran_app/features/quran/data/quran_data.dart';
 
 import '../../../core/router/routes.dart';
 
@@ -44,8 +45,8 @@ class _SplashScreenState extends State<SplashScreen>
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: Future.delayed(const Duration(seconds: 3), () async {
-        context.pushNamedAndRemoveUntil(Routes.homeScreen,
-            predicate: (context) => false);
+        context.pushNamedAndRemoveUntil(Routes.surahDetailsScreen,
+            arguments: surahs[0], predicate: (context) => false);
       }),
       builder: (context, snapshot) {
         return Scaffold(
