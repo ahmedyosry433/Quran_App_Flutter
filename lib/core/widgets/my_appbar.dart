@@ -42,9 +42,7 @@ class MyAppBar extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              title == ''
-                  ? Scaffold.of(context).openDrawer()
-                  : context.pushReplacementNamed('homeScreen');
+              context.pushNamed('homeScreen');
             },
             icon: Image.asset(
               title == ''

@@ -2,8 +2,7 @@
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/helper/extensions.dart';
@@ -26,7 +25,7 @@ class SurahDetailsScreen extends StatefulWidget {
 class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
   bool isAppbar = false;
   int selectedDrawerIndex = 0;
-  List myDrawers = [];
+  List<Widget> myDrawers = [];
 
   @override
   void initState() {

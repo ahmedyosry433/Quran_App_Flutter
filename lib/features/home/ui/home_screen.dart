@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:jhijri/_src/_jHijri.dart';
-import 'package:lottie/lottie.dart';
 import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/helper/spacing.dart';
@@ -24,7 +23,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(top: 35.h),
         height: double.infinity,
         width: double.infinity,
         decoration: const BoxDecoration(
@@ -33,11 +31,22 @@ class HomeScreen extends StatelessWidget {
             fit: BoxFit.fill,
           ),
         ),
-        child: Stack(
-          alignment: Alignment.topCenter,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Align(
+              alignment: Alignment.centerRight,
+              child: IconButton(
+                onPressed: () => context.pop(),
+                icon: Image.asset(
+                  'assets/image/arrow.png',
+                  width: 40.w,
+                  height: 40.h,
+                ),
+              ),
+            ),
             buildDateTimeCardAndAnimationImage(),
-            Positioned(bottom: 30.h, child: buildCategories(context)),
+            buildCategories(context),
           ],
         ),
       ),
@@ -45,66 +54,45 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget buildDateTimeCardAndAnimationImage() {
-    return Container(
-      margin: EdgeInsets.only(top: 20.h),
-      height: 360.h,
-      width: 290.w,
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: ColorsManager.primary.withOpacity(0.2),
-            spreadRadius: 1,
-            blurRadius: 3,
-            offset: const Offset(0, 1), // changes position of shadow
+    return Padding(
+      padding: EdgeInsets.only(top: 0.h, right: 10.w, left: 10.w, bottom: 10.h),
+      child: Column(
+        children: [
+          verticalSpace(10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Text(
+                    '${jHijri.day.toArabicNumbers}-',
+                    style: TextStyles.font18BlackRegular,
+                  ),
+                  Text(
+                    jHijri.monthName,
+                    style: TextStyles.font18BlackRegular,
+                  ),
+                  Text(
+                    '-${jHijri.year.toArabicNumbers}',
+                    style: TextStyles.font18BlackRegular,
+                  ),
+                ],
+              ),
+              Text(
+                dateFormated,
+                style: TextStyles.font18BlackRegular,
+              ),
+            ],
           ),
         ],
-        color: ColorsManager.transparentColor,
-        shape: BoxShape.rectangle,
-        borderRadius: BorderRadius.circular(15.r),
-      ),
-      child: Padding(
-        padding:
-            EdgeInsets.only(top: 0.h, right: 10.w, left: 10.w, bottom: 10.h),
-        child: Column(
-          children: [
-            verticalSpace(10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      '${jHijri.day.toArabicNumbers}-',
-                      style: TextStyles.font18BlackRegular,
-                    ),
-                    Text(
-                      jHijri.monthName,
-                      style: TextStyles.font18BlackRegular,
-                    ),
-                    Text(
-                      '-${jHijri.year.toArabicNumbers}',
-                      style: TextStyles.font18BlackRegular,
-                    ),
-                  ],
-                ),
-                Text(
-                  dateFormated,
-                  style: TextStyles.font18BlackRegular,
-                ),
-              ],
-            ),
-            Lottie.asset('assets/image/home_animation.json',
-                width: 500.w, height: 300.h),
-          ],
-        ),
       ),
     );
   }
 
   Widget buildCategories(BuildContext context) {
     return Container(
-      height: 200.h,
       width: 320.w,
+      height: 450.h,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -125,13 +113,13 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
                   onTap: () => context.pushNamed(Routes.quranScreen),
                   child: Container(
-                    height: 70.h,
-                    width: 70.w,
+                    height: 110.h,
+                    width: 120.w,
                     decoration: BoxDecoration(
                         color: ColorsManager.primarySwatch,
                         borderRadius: BorderRadius.circular(10.r)),
@@ -139,20 +127,20 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         verticalSpace(10),
                         Image.asset('assets/image/quran.png',
-                            width: 35.w, height: 35.h),
-                        verticalSpace(5),
+                            width: 60.w, height: 60.h),
+                        verticalSpace(10),
                         Text(
                           'quran'.tr(),
-                          style: TextStyles.font10WhiteRegular,
+                          style: TextStyles.font17WhiteRegular,
                         )
                       ],
                     ),
                   ),
                 ),
-                horizontalSpace(30),
+                horizontalSpace(15),
                 Container(
-                  height: 70.h,
-                  width: 70.w,
+                  height: 110.h,
+                  width: 120.w,
                   decoration: BoxDecoration(
                       color: ColorsManager.primarySwatch,
                       borderRadius: BorderRadius.circular(10.r)),
@@ -160,19 +148,47 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       verticalSpace(10),
                       Image.asset('assets/image/mark.png',
-                          width: 35.w, height: 35.h),
-                      verticalSpace(5),
+                          width: 60.w, height: 60.h),
+                      verticalSpace(10),
                       Text(
                         'marks'.tr(),
-                        style: TextStyles.font10WhiteRegular,
+                        style: TextStyles.font17WhiteRegular,
                       )
                     ],
                   ),
                 ),
-                horizontalSpace(30),
+              ],
+            ),
+            verticalSpace(15),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                GestureDetector(
+                  onTap: () => context.pushNamed(Routes.hadithScreen),
+                  child: Container(
+                    height: 110.h,
+                    width: 120.w,
+                    decoration: BoxDecoration(
+                        color: ColorsManager.primarySwatch,
+                        borderRadius: BorderRadius.circular(10.r)),
+                    child: Column(
+                      children: [
+                        verticalSpace(10),
+                        Image.asset('assets/image/hadith.png',
+                            width: 60.w, height: 60.h),
+                        verticalSpace(10),
+                        Text(
+                          'hadith'.tr(),
+                          style: TextStyles.font17WhiteRegular,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                horizontalSpace(15),
                 Container(
-                  height: 70.h,
-                  width: 70.w,
+                  height: 110.h,
+                  width: 120.w,
                   decoration: BoxDecoration(
                       color: ColorsManager.primarySwatch,
                       borderRadius: BorderRadius.circular(10.r)),
@@ -182,11 +198,11 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         verticalSpace(10),
                         Image.asset('assets/image/tasbih.png',
-                            width: 35.w, height: 35.h),
-                        verticalSpace(5),
+                            width: 60.w, height: 60.h),
+                        verticalSpace(10),
                         Text(
                           'tasbih'.tr(),
-                          style: TextStyles.font10WhiteRegular,
+                          style: TextStyles.font17WhiteRegular,
                         ),
                       ],
                     ),
@@ -194,21 +210,15 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            verticalSpace(10),
-            Divider(
-              color: ColorsManager.white,
-              thickness: 1,
-              height: 3.h,
-            ),
-            verticalSpace(10),
+            verticalSpace(15),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
                   onTap: () => context.pushNamed(Routes.azkarSabahScreen),
                   child: Container(
-                    height: 70.h,
-                    width: 70.w,
+                    height: 110.h,
+                    width: 120.w,
                     decoration: BoxDecoration(
                         color: ColorsManager.primarySwatch,
                         borderRadius: BorderRadius.circular(10.r)),
@@ -216,22 +226,22 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         verticalSpace(10),
                         Image.asset('assets/image/azkarSabah.png',
-                            width: 35.w, height: 35.h),
-                        verticalSpace(5),
+                            width: 60.w, height: 60.h),
+                        verticalSpace(10),
                         Text(
                           'azkarSabah'.tr(),
-                          style: TextStyles.font10WhiteRegular,
+                          style: TextStyles.font17WhiteRegular,
                         ),
                       ],
                     ),
                   ),
                 ),
-                horizontalSpace(30),
+                horizontalSpace(15),
                 GestureDetector(
                   onTap: () => context.pushNamed(Routes.azkarMasaaScreen),
                   child: Container(
-                    height: 70.h,
-                    width: 70.w,
+                    height: 110.h,
+                    width: 120.w,
                     decoration: BoxDecoration(
                         color: ColorsManager.primarySwatch,
                         borderRadius: BorderRadius.circular(10.r)),
@@ -239,34 +249,11 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         verticalSpace(10),
                         Image.asset('assets/image/azkarMasaa.png',
-                            width: 35.w, height: 35.h),
-                        verticalSpace(5),
+                            width: 60.w, height: 60.h),
+                        verticalSpace(10),
                         Text(
                           'azkarMasaa'.tr(),
-                          style: TextStyles.font10WhiteRegular,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                horizontalSpace(30),
-                GestureDetector(
-                  onTap: () => context.pushNamed(Routes.hadithScreen),
-                  child: Container(
-                    height: 70.h,
-                    width: 70.w,
-                    decoration: BoxDecoration(
-                        color: ColorsManager.primarySwatch,
-                        borderRadius: BorderRadius.circular(10.r)),
-                    child: Column(
-                      children: [
-                        verticalSpace(10),
-                        Image.asset('assets/image/hadith.png',
-                            width: 35.w, height: 35.h),
-                        verticalSpace(5),
-                        Text(
-                          'hadith'.tr(),
-                          style: TextStyles.font10WhiteRegular,
+                          style: TextStyles.font17WhiteRegular,
                         ),
                       ],
                     ),
