@@ -17,6 +17,7 @@ class AzkarMasaaScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
+            opacity: 0.5,
             image: AssetImage('assets/image/background.jpeg'),
             fit: BoxFit.cover,
           ),

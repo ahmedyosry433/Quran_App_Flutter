@@ -44,69 +44,79 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
     return Scaffold(
       backgroundColor: ColorsManager.lighterprimary,
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(60.h),
+          preferredSize: Size.fromHeight(isAppbar ? 60.h : 0.h),
           child: MyAppBar(
             title: '',
           )),
       drawer: myDrawers[selectedDrawerIndex],
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            buildSourahList(),
-          ],
+        child: InkWell(
+          onTap: () {
+            setState(() {
+              isAppbar = !isAppbar;
+            });
+          },
+          child: Column(
+            children: [
+              buildSourahList(),
+            ],
+          ),
         ),
       ),
     );
   }
 
   Widget buildSourahList() {
-    return Column(
-      children: [
-        Stack(
-          alignment: Alignment.center,
-          children: [
-            Image.asset(
-              'assets/image/sourah_name.png',
-              height: 60.h,
-              width: 600.w,
-              fit: BoxFit.fill,
-            ),
-            Text(widget.surah.arabic, style: TextStyles.font20BlackRegular)
-          ],
-        ),
-        Image.asset(
-          'assets/image/basmala.png',
-          height:
-              widget.surah.index == 9 || widget.surah.index == 1 ? 0.h : 40.h,
-        ),
-        RichText(
-          textAlign: TextAlign.justify,
-          overflow: TextOverflow.visible,
-          text: TextSpan(
-              style: TextStyle(
-                fontSize: 15.sp,
-                color: Colors.black,
+    return Padding(
+      padding: EdgeInsets.only(top: 10.h, left: 10.w, right: 10.w),
+      child: Column(
+        children: [
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              Image.asset(
+                'assets/image/sourah_name.png',
+                height: 60.h,
+                width: 600.w,
+                fit: BoxFit.fill,
               ),
-              children: widget.surah.verses
-                  .map(
-                    (e) => TextSpan(
-                      text: '${e.text} ${e.number.toArabicNumbers} ',
-                      style: TextStyles.font16BlackRegular.copyWith(
-                          fontFamily: 'QuranKarim',
-                          fontWeight: FontWeight.w300,
-                          fontSize: 20.sp,
-                          height: 1.5),
-                    ),
-                  )
-                  .toList()),
-        ),
-      ],
+              Text(widget.surah.arabic, style: TextStyles.font20BlackRegular)
+            ],
+          ),
+          Image.asset(
+            'assets/image/basmala.png',
+            height:
+                widget.surah.index == 9 || widget.surah.index == 1 ? 0.h : 40.h,
+          ),
+          RichText(
+            textAlign: TextAlign.justify,
+            overflow: TextOverflow.visible,
+            text: TextSpan(
+                style: TextStyle(
+                  fontSize: 15.sp,
+                  color: Colors.black,
+                ),
+                children: widget.surah.verses
+                    .map(
+                      (e) => TextSpan(
+                        text: '${e.text} ${e.number.toArabicNumbers} ',
+                        style: TextStyles.font16BlackRegular.copyWith(
+                            fontFamily: 'QuranKarim',
+                            fontWeight: FontWeight.w300,
+                            fontSize: 20.sp,
+                            height: 1.5),
+                      ),
+                    )
+                    .toList()),
+          ),
+        ],
+      ),
     );
   }
 
   Widget sourahsDrawer() {
     return Drawer(
-      backgroundColor: ColorsManager.primary.withOpacity(0.99),
+      backgroundColor: ColorsManager.primary.withOpacity(0.9),
       shape: const BeveledRectangleBorder(),
       width: 500.w,
       child: ListView(

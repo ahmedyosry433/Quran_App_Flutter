@@ -22,6 +22,7 @@ class TasbihScreen extends StatelessWidget {
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
+              opacity: 0.7,
               image: AssetImage("assets/image/background.jpeg"),
               fit: BoxFit.fill,
             ),
@@ -60,8 +61,8 @@ class TasbihScreen extends StatelessWidget {
                   padding: MaterialStateProperty.all(const EdgeInsets.all(12)),
                   backgroundColor: MaterialStateProperty.all(
                       tasbih.type != '(باقيات صالحات)'
-                          ? ColorsManager.primarySwatch
-                          : ColorsManager.primary),
+                          ? ColorsManager.white
+                          : ColorsManager.grey),
                   shape: MaterialStateProperty.all(const StadiumBorder())),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,13 +77,13 @@ class TasbihScreen extends StatelessWidget {
                             tasbih.name,
                             textAlign: TextAlign.center,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyles.font13WhiteRegular,
+                            style: TextStyles.font13BlackSemiBold,
                           ),
                         ),
                         horizontalSpace(10),
                         Text(tasbih.type,
                             textAlign: TextAlign.center,
-                            style: TextStyles.font13WhiteRegular),
+                            style: TextStyles.font13BlackSemiBold),
                       ],
                     ),
                   ),
@@ -100,7 +101,7 @@ class TasbihScreen extends StatelessWidget {
                     child: Center(
                       child: Text(tasbih.counter.toArabicNumbers,
                           textAlign: TextAlign.center,
-                          style: TextStyles.font13WhiteRegular),
+                          style: TextStyles.font13BlackSemiBold),
                     ),
                   ),
                 ],

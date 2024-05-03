@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
@@ -17,8 +18,9 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
   final jHijri = JHijri.now();
-  var dateFormated =
-      DateFormat('d-MMMM-yyyy', 'ar').format(DateTime.now()).toString();
+
+  var arabicMonth = DateFormat('MMMM', 'ar').format(DateTime.now()).toString();
+  var arabicDay = DateFormat('d', 'ar').format(DateTime.now()).toString();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,25 +29,16 @@ class HomeScreen extends StatelessWidget {
         width: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
+            opacity: 0.7,
             image: AssetImage("assets/image/background.jpeg"),
-            fit: BoxFit.fill,
+            fit: BoxFit.cover,
           ),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Align(
-              alignment: Alignment.centerRight,
-              child: IconButton(
-                onPressed: () => context.pop(),
-                icon: Image.asset(
-                  'assets/image/arrow.png',
-                  width: 40.w,
-                  height: 40.h,
-                ),
-              ),
-            ),
-            buildDateTimeCardAndAnimationImage(),
+            verticalSpace(40),
+            buildDateTimeCardAndBack(context),
             buildCategories(context),
           ],
         ),
@@ -53,37 +46,51 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget buildDateTimeCardAndAnimationImage() {
-    return Padding(
-      padding: EdgeInsets.only(top: 0.h, right: 10.w, left: 10.w, bottom: 10.h),
+  Widget dateTimeCard({required String day, required String month}) {
+    return Container(
+      width: 65.w,
+      height: 60.h,
+      decoration: BoxDecoration(
+          color: ColorsManager.white.withOpacity(0.7),
+          borderRadius: BorderRadius.circular(10.r)),
       child: Column(
         children: [
-          verticalSpace(10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  Text(
-                    '${jHijri.day.toArabicNumbers}-',
-                    style: TextStyles.font18BlackRegular,
-                  ),
-                  Text(
-                    jHijri.monthName,
-                    style: TextStyles.font18BlackRegular,
-                  ),
-                  Text(
-                    '-${jHijri.year.toArabicNumbers}',
-                    style: TextStyles.font18BlackRegular,
-                  ),
-                ],
-              ),
-              Text(
-                dateFormated,
-                style: TextStyles.font18BlackRegular,
-              ),
-            ],
+          Text(
+            month,
+            style: TextStyles.font16BlackRegular,
           ),
+          Divider(
+            color: ColorsManager.primary,
+          ),
+          Text(
+            day,
+            style: TextStyles.font19BlackSemiBold,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget buildDateTimeCardAndBack(BuildContext context) {
+    return Padding(
+      padding:
+          EdgeInsets.only(top: 10.h, bottom: 40.h, right: 15.w, left: 15.w),
+      child: Row(
+        children: [
+          IconButton(
+            onPressed: () => context.pop(),
+            icon: Image.asset(
+              'assets/image/arrow.png',
+              width: 30.w,
+              height: 30.h,
+              color: ColorsManager.white,
+            ),
+          ),
+          horizontalSpace(50),
+          dateTimeCard(
+              day: jHijri.day.toArabicNumbers, month: jHijri.monthName),
+          horizontalSpace(40),
+          dateTimeCard(day: arabicDay, month: arabicMonth),
         ],
       ),
     );
@@ -94,6 +101,7 @@ class HomeScreen extends StatelessWidget {
       width: 320.w,
       height: 450.h,
       decoration: BoxDecoration(
+        border: Border.all(width: 1, color: ColorsManager.white),
         boxShadow: [
           BoxShadow(
             color: ColorsManager.primarySwatch.withOpacity(0.65),
@@ -121,6 +129,8 @@ class HomeScreen extends StatelessWidget {
                     height: 110.h,
                     width: 120.w,
                     decoration: BoxDecoration(
+                        border:
+                            Border.all(width: 0.3, color: ColorsManager.white),
                         color: ColorsManager.primarySwatch,
                         borderRadius: BorderRadius.circular(10.r)),
                     child: Column(
@@ -131,7 +141,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(10),
                         Text(
                           'quran'.tr(),
-                          style: TextStyles.font17WhiteRegular,
+                          style: TextStyles.font15WhiteRegular,
                         )
                       ],
                     ),
@@ -142,6 +152,8 @@ class HomeScreen extends StatelessWidget {
                   height: 110.h,
                   width: 120.w,
                   decoration: BoxDecoration(
+                      border:
+                          Border.all(width: 0.3, color: ColorsManager.white),
                       color: ColorsManager.primarySwatch,
                       borderRadius: BorderRadius.circular(10.r)),
                   child: Column(
@@ -152,7 +164,7 @@ class HomeScreen extends StatelessWidget {
                       verticalSpace(10),
                       Text(
                         'marks'.tr(),
-                        style: TextStyles.font17WhiteRegular,
+                        style: TextStyles.font15WhiteRegular,
                       )
                     ],
                   ),
@@ -169,6 +181,8 @@ class HomeScreen extends StatelessWidget {
                     height: 110.h,
                     width: 120.w,
                     decoration: BoxDecoration(
+                        border:
+                            Border.all(width: 0.3, color: ColorsManager.white),
                         color: ColorsManager.primarySwatch,
                         borderRadius: BorderRadius.circular(10.r)),
                     child: Column(
@@ -179,7 +193,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(10),
                         Text(
                           'hadith'.tr(),
-                          style: TextStyles.font17WhiteRegular,
+                          style: TextStyles.font15WhiteRegular,
                         ),
                       ],
                     ),
@@ -190,6 +204,8 @@ class HomeScreen extends StatelessWidget {
                   height: 110.h,
                   width: 120.w,
                   decoration: BoxDecoration(
+                      border:
+                          Border.all(width: 0.3, color: ColorsManager.white),
                       color: ColorsManager.primarySwatch,
                       borderRadius: BorderRadius.circular(10.r)),
                   child: GestureDetector(
@@ -202,7 +218,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(10),
                         Text(
                           'tasbih'.tr(),
-                          style: TextStyles.font17WhiteRegular,
+                          style: TextStyles.font15WhiteRegular,
                         ),
                       ],
                     ),
@@ -220,6 +236,8 @@ class HomeScreen extends StatelessWidget {
                     height: 110.h,
                     width: 120.w,
                     decoration: BoxDecoration(
+                        border:
+                            Border.all(width: 0.3, color: ColorsManager.white),
                         color: ColorsManager.primarySwatch,
                         borderRadius: BorderRadius.circular(10.r)),
                     child: Column(
@@ -230,7 +248,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(10),
                         Text(
                           'azkarSabah'.tr(),
-                          style: TextStyles.font17WhiteRegular,
+                          style: TextStyles.font15WhiteRegular,
                         ),
                       ],
                     ),
@@ -243,6 +261,8 @@ class HomeScreen extends StatelessWidget {
                     height: 110.h,
                     width: 120.w,
                     decoration: BoxDecoration(
+                        border:
+                            Border.all(width: 0.3, color: ColorsManager.white),
                         color: ColorsManager.primarySwatch,
                         borderRadius: BorderRadius.circular(10.r)),
                     child: Column(
@@ -253,7 +273,7 @@ class HomeScreen extends StatelessWidget {
                         verticalSpace(10),
                         Text(
                           'azkarMasaa'.tr(),
-                          style: TextStyles.font17WhiteRegular,
+                          style: TextStyles.font15WhiteRegular,
                         ),
                       ],
                     ),

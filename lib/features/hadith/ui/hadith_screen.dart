@@ -21,6 +21,7 @@ class HadithScreen extends StatelessWidget {
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
+              opacity: 0.4,
               image: AssetImage('assets/image/background.jpeg'),
               fit: BoxFit.cover,
             ),

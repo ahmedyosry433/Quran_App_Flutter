@@ -47,6 +47,7 @@ class _TasbihDetailsScreenState extends State<TasbihDetailsScreen>
         decoration: BoxDecoration(
           color: ColorsManager.primary,
           image: const DecorationImage(
+            opacity: 0.7,
             image: AssetImage("assets/image/background.jpeg"),
             fit: BoxFit.cover,
           ),
@@ -81,7 +82,7 @@ class _TasbihDetailsScreenState extends State<TasbihDetailsScreen>
             decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: ColorsManager.primarySwatch.withOpacity(0.25),
+                    color: ColorsManager.white.withOpacity(0.25),
                     spreadRadius: 1,
                     blurRadius: 5,
                     offset: const Offset(0, 3), // changes position of shadow
@@ -91,7 +92,7 @@ class _TasbihDetailsScreenState extends State<TasbihDetailsScreen>
                 borderRadius: BorderRadius.circular(10.r)),
             child: Text(
               widget.tasbih.name,
-              style: TextStyles.font18BlackRegular,
+              style: TextStyles.font17WhiteRegular,
               textAlign: TextAlign.center,
             )),
         verticalSpace(15),
@@ -109,6 +110,7 @@ class _TasbihDetailsScreenState extends State<TasbihDetailsScreen>
                     });
                   },
                   icon: Icon(
+                    color: ColorsManager.white,
                     Icons.restart_alt_outlined,
                     size: 50.sp,
                   )),
