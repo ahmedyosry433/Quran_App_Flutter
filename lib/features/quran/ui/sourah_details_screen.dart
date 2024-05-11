@@ -23,7 +23,7 @@ class SurahDetailsScreen extends StatefulWidget {
 }
 
 class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
-  bool isAppbar = false;
+  bool isAppbar = true;
   int selectedDrawerIndex = 0;
   List<Widget> myDrawers = [];
 
@@ -49,18 +49,20 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
             title: '',
           )),
       drawer: myDrawers[selectedDrawerIndex],
-      body: SingleChildScrollView(
-        child: InkWell(
-          onTap: () {
-            setState(() {
-              isAppbar = !isAppbar;
-            });
+      body: InkWell(
+        onTap: () {
+          setState(() {
+            isAppbar = !isAppbar;
+          });
+        },
+        child: PageView.builder(
+          itemCount: 604,
+          padEnds: false,
+          scrollDirection: Axis.horizontal,
+          physics: const ClampingScrollPhysics(),
+          itemBuilder: (_, index) {
+            return buildSourahList();
           },
-          child: Column(
-            children: [
-              buildSourahList(),
-            ],
-          ),
         ),
       ),
     );
