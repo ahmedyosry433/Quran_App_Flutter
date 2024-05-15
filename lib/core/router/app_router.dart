@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quran_app/core/dj/dj.dart';
 import 'package:quran_app/core/router/routes.dart';
 import 'package:quran_app/features/azkar/ui/azkar_masaa_screen.dart';
 import 'package:quran_app/features/azkar/ui/azkar_sabah_screen.dart';
 import 'package:quran_app/features/hadith/ui/hadith_screen.dart';
 import 'package:quran_app/features/home/ui/home_screen.dart';
-import 'package:quran_app/features/quran/data/model/quran_model.dart';
+import 'package:quran_app/features/quran/data/model/quran_models.dart';
+import 'package:quran_app/features/quran/logic/cubit/quran_cubit.dart';
 import 'package:quran_app/features/quran/ui/sourah_details_screen.dart';
 import 'package:quran_app/features/tasbih/data/model/tasbih_model.dart';
 import 'package:quran_app/features/tasbih/ui/tasbih_details_screen.dart';
@@ -16,6 +19,7 @@ import '../../features/splash/ui/splash_screen.dart';
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {
     final argument = settings.arguments;
+
     switch (settings.name) {
       case Routes.splashScreen:
         return MaterialPageRoute(
@@ -47,11 +51,17 @@ class AppRouter {
         );
       case Routes.surahDetailsScreen:
         return MaterialPageRoute(
-          builder: (_) => SurahDetailsScreen(surah: argument as SurahModel),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<QuranCubit>(),
+            child: SurahDetailsScreen(surah: argument as Surah),
+          ),
         );
       case Routes.quranScreen:
         return MaterialPageRoute(
-          builder: (_) => const QuranScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<QuranCubit>(),
+            child: const QuranScreen(),
+          ),
         );
 
       default:
