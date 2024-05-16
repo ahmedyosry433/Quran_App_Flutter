@@ -1,11 +1,13 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/theme/colors.dart';
+import 'package:quran_app/core/theme/font_weight_helper.dart';
 import 'package:quran_app/core/theme/style.dart';
 import 'package:quran_app/core/widgets/my_appbar.dart';
 import 'package:quran_app/features/quran/data/model/quran_models.dart';
@@ -29,12 +31,15 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
     super.initState();
     context.read<QuranCubit>().getAllQuranCubit();
     // myDrawers = [sourahsDrawer(), categoriesDrawer()];
+    pageCtr = PageController(initialPage: widget.surah.ayahs[0].page - 1);
   }
+
+  PageController pageCtr = PageController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorsManager.lighterprimary,
+      backgroundColor: ColorsManager.white,
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(isAppbar ? 60.h : 0.h),
           child: MyAppBar(
@@ -48,7 +53,7 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
               child: CircularProgressIndicator(),
             );
           } else if (state is QuranSuccess) {
-            return buildBody();
+            return Align(alignment: Alignment.center, child: buildBody());
           } else if (state is QuranError) {
             return Center(
               child: Text(state.error),
@@ -61,78 +66,195 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
   }
 
   Widget buildBody() {
+    final quranBloc = BlocProvider.of<QuranCubit>(context);
+
     return InkWell(
       onTap: () {
-        context.read<QuranCubit>().getAllQuranCubit();
         setState(() {
           isAppbar = !isAppbar;
         });
       },
       child: PageView.builder(
-        // itemCount: 10,
+        // controller: quranBloc.pageController,
+        controller: pageCtr,
+        itemCount: 604,
         padEnds: false,
         scrollDirection: Axis.horizontal,
         physics: const ClampingScrollPhysics(),
+        onPageChanged: quranBloc.pageChanged,
         itemBuilder: (_, index) {
-          return buildSourahList();
+          return Container(
+            child: BlocProvider.of<QuranCubit>(context).pages.isEmpty
+                ? const CircularProgressIndicator.adaptive()
+                : SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: 10.h, bottom: 20.h, left: 10.w, right: 10.h),
+                          child: Column(
+                            // mainAxisSize: MainAxisSize.max,
+                            children: List.generate(
+                                quranBloc
+                                    .getCurrentPageAyahsSeparatedForBasmalah(
+                                        index)
+                                    .length, (i) {
+                              final ayahs = quranBloc
+                                  .getCurrentPageAyahsSeparatedForBasmalah(
+                                      index)[i];
+                              return Column(children: [
+                                surahBannerFirstPlace(index, i),
+                                quranBloc.getSurahNumberByAyah(ayahs.first) ==
+                                            9 ||
+                                        quranBloc.getSurahNumberByAyah(
+                                                ayahs.first) ==
+                                            1
+                                    ? const SizedBox.shrink()
+                                    : Padding(
+                                        padding: EdgeInsets.only(bottom: 8.0.h),
+                                        child: ayahs.first.ayahNumber == 1
+                                            ? (quranBloc.getSurahNumberByAyah(
+                                                            ayahs.first) ==
+                                                        95 ||
+                                                    quranBloc
+                                                            .getSurahNumberByAyah(
+                                                                ayahs.first) ==
+                                                        97)
+                                                ? besmAllah()
+                                                : besmAllah2()
+                                            : const SizedBox.shrink(),
+                                      ),
+                                buildTextBuild(
+                                  index,
+                                  ayahs,
+                                ),
+                                // surahBannerLastPlace(index, i),
+                              ]);
+                            }),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.bottomCenter,
+                          child: Text(
+                            (index + 1).toArabicNumbers,
+                            style: TextStyles.font12BlackRegular
+                                .copyWith(fontFamily: 'naskh', fontSize: 15.sp),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+          );
         },
       ),
     );
   }
 
-  Widget buildSourahList() {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.only(top: 10.h, left: 10.w, right: 10.w),
-        child: Column(
-          children: [
-            Stack(
-              alignment: Alignment.center,
+  Widget surahBannerFirstPlace(int pageIndex, int i) {
+    final quranBloc = BlocProvider.of<QuranCubit>(context);
+    final ayahs =
+        quranBloc.getCurrentPageAyahsSeparatedForBasmalah(pageIndex)[i];
+    return ayahs.first.ayahNumber == 1
+        ? quranBloc.topOfThePageIndex.contains(pageIndex)
+            ? const SizedBox.shrink()
+            : surahBanner(
+                width: 100.w,
+                height: 50.h,
+                index: quranBloc.getSurahNumberByAyah(ayahs.first) + 1)
+        : const SizedBox.shrink();
+  }
+
+  Widget surahBannerLastPlace(int pageIndex, int i) {
+    final quranBloc = BlocProvider.of<QuranCubit>(context);
+
+    final ayahs =
+        quranBloc.getCurrentPageAyahsSeparatedForBasmalah(pageIndex)[i];
+    return quranBloc.downThePageIndex.contains(pageIndex)
+        ? surahBanner(index: (quranBloc.getSurahNumberByAyah(ayahs.first) - 1))
+        : const SizedBox.shrink();
+  }
+
+  Widget buildTextBuild(int pageIndex, List<Ayah> ayahs) {
+    return Padding(
+      padding: const EdgeInsets.all(0),
+      child: RichText(
+        textAlign: TextAlign.justify,
+        // overflow: TextOverflow.visible,
+        textDirection: TextDirection.rtl,
+        text: TextSpan(
+          children: List.generate(ayahs.length, (ayahIndex) {
+            return TextSpan(
               children: [
-                Image.asset(
-                  'assets/image/sourah_name.png',
-                  height: 60.h,
-                  width: 600.w,
-                  fit: BoxFit.fill,
+                TextSpan(
+                  text: ayahs[ayahIndex].text,
+                  style: TextStyles.font16BlackRegular.copyWith(
+                      fontFamily: 'uthmanic2',
+                      fontWeight: FontWeightHelper.medium,
+                      fontSize: 20.sp,
+                      height: 1.7,
+                      letterSpacing: -0.25,
+                      color: Colors.black),
                 ),
-                Text(widget.surah.arabicName,
-                    style: TextStyles.font20BlackRegular)
-              ],
-            ),
-            Image.asset(
-              'assets/image/basmala.png',
-              height:
-                  widget.surah.surahNumber == 9 || widget.surah.surahNumber == 1
-                      ? 0.h
-                      : 40.h,
-            ),
-            RichText(
-              textAlign: TextAlign.justify,
-              overflow: TextOverflow.visible,
-              text: TextSpan(
-                  style: TextStyle(
-                    fontSize: 15.sp,
-                    color: Colors.black,
+                WidgetSpan(
+                    child: Padding(
+                  padding: EdgeInsets.only(right: 7.w, left: 7.w),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      SvgPicture.asset(
+                        'assets/svg/ayah.svg',
+                        width: 25.w,
+                        // height: 30.h,
+                      ),
+                      Positioned(
+                          child: Text(
+                        ayahs[ayahIndex].ayahNumber.toArabicNumbers,
+                        style: TextStyles.font13BlackSemiBold.copyWith(
+                            fontFamily: 'naskh',
+                            fontWeight: FontWeightHelper.medium),
+                      )),
+                    ],
                   ),
-                  children: widget.surah.ayahs
-                      .map(
-                        (e) => TextSpan(
-                          text: '${e.text} ${e.ayahNumber.toArabicNumbers} ',
-                          style: TextStyles.font16BlackRegular.copyWith(
-                              fontFamily: 'QuranKarim',
-                              fontWeight: FontWeight.w300,
-                              fontSize: 20.sp,
-                              height: 1.5),
-                        ),
-                      )
-                      .toList()),
-            ),
-          ],
+                ))
+              ],
+            );
+          }),
         ),
       ),
     );
   }
 
+  Widget besmAllah() {
+    return SvgPicture.asset(
+      'assets/svg/besmAllah.svg',
+      width: 150.w,
+    );
+  }
+
+  Widget besmAllah2() {
+    return SvgPicture.asset(
+      'assets/svg/besmAllah2.svg',
+      width: 150.w,
+    );
+  }
+
+  Widget surahBanner({double? height, double? width, required int index}) {
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        SvgPicture.asset(
+          'assets/svg/surah_banner1.svg',
+          width: width,
+          height: height,
+        ),
+        Positioned(
+            child: SvgPicture.asset(
+          'assets/svg/surah_name/00${index - 1}.svg',
+          color: ColorsManager.black,
+        ))
+      ],
+    );
+  }
   // Widget sourahsDrawer() {
   //   return Drawer(
   //     backgroundColor: ColorsManager.primary.withOpacity(0.9),

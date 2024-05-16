@@ -1,6 +1,11 @@
+// ignore_for_file: deprecated_member_use
+
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
 import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/helper/spacing.dart';
@@ -44,7 +49,8 @@ class _QuranScreenState extends State<QuranScreen> {
             child: CircularProgressIndicator(),
           );
         } else if (state is QuranSuccess) {
-          return buildQuranCard(context: context, surah: state.surah);
+          return buildQuranCard(
+              context: context, surah: context.read<QuranCubit>().surahs);
         } else if (state is QuranError) {
           return Center(
             child: Text(state.error),
@@ -81,26 +87,29 @@ class _QuranScreenState extends State<QuranScreen> {
                             child: Stack(
                               alignment: AlignmentDirectional.center,
                               children: [
-                                Image.asset('assets/image/star.png'),
+                                SvgPicture.asset('assets/svg/sora_num.svg'),
                                 Positioned(
                                   child: Text(
                                       surah[index].surahNumber.toArabicNumbers,
-                                      style: TextStyles.font16BlackRegular),
+                                      style: TextStyles.font18BlackRegular
+                                          .copyWith(fontFamily: 'page1')),
                                 ),
                               ],
                             )),
                         horizontalSpace(10),
-                        Text(
-                          surah[index].arabicName,
-                          style: TextStyles.font16BlackRegular,
+                        SvgPicture.asset(
+                          'assets/svg/surah_name/00${index + 1}.svg',
+                          width: 75.w,
+                          height: 40.h,
+                          color: ColorsManager.black,
                         ),
                       ],
                     ),
                     Column(children: [
-                      Text(surah[index].revelationType,
+                      Text(surah[index].revelationType.tr(),
                           style: TextStyles.font13WhiteRegular),
-                      // Text('${surah.verseCount} آيه',
-                      // style: TextStyles.font13WhiteRegular),
+                      Text('${surah[index].ayahs.last.ayahNumber} آيه',
+                          style: TextStyles.font13WhiteRegular),
                     ])
                   ],
                 ),

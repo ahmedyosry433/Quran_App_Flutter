@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class ColorsManager {
   static Color primarySwatch = const Color.fromARGB(255, 11, 110, 69);
   // static Color primarySwatch = const Color.fromARGB(255, 175, 130, 33);
-  static Color primary = Colors.green;
+  static Color primary = Color.fromARGB(255, 21, 62, 95);
+  // static Color primary = Colors.green;
   static Color lighterprimary = const Color.fromARGB(255, 250, 241, 221);
   // static Color primary = const Color.fromARGB(255, 201, 163, 82);
   static Color splash = Colors.deepPurpleAccent;
