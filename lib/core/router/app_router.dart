@@ -33,6 +33,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const HadithScreen(),
         );
+
       case Routes.azkarMasaaScreen:
         return MaterialPageRoute(
           builder: (_) => const AzkarMasaaScreen(),
