@@ -3,44 +3,66 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 // ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:jhijri/_src/_jHijri.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
-import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/helper/spacing.dart';
-import 'package:quran_app/core/router/routes.dart';
 import 'package:quran_app/core/theme/colors.dart';
 import 'package:quran_app/core/theme/style.dart';
+import 'package:quran_app/features/hadith/data/hadith_data.dart';
+import 'package:quran_app/features/hadith/logic/cubit/hadith_cubit.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   final jHijri = JHijri.now();
+
   DateTime dateTime = DateTime.now();
+
   var arabicMonth = DateFormat('MMMM', 'ar').format(DateTime.now()).toString();
+
   var arabicDay = DateFormat('d', 'ar').format(DateTime.now()).toString();
+
+  int randomIndex = 0;
+  @override
+  void initState() {
+    super.initState();
+    randomIndex = BlocProvider.of<HadithCubit>(context)
+        .getDailyRandomIndex(hadithList.length);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            height: 50.h,
-            decoration: BoxDecoration(
-              color: ColorsManager.primary,
-              borderRadius: BorderRadius.circular(2.r),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              height: 50.h,
+              decoration: BoxDecoration(
+                color: ColorsManager.primary,
+                borderRadius: BorderRadius.circular(2.r),
+              ),
             ),
-          ),
-          verticalSpace(20),
-          buildDate(),
-          buildLastRead(),
-          buildCategoryCard(),
-        ],
+            verticalSpace(20),
+            buildDate(),
+            buildLastRead(),
+            buildCategoryCard(),
+            buildDailyDoaa(),
+          ],
+        ),
       ),
     );
   }
@@ -270,7 +292,7 @@ class HomeScreen extends StatelessWidget {
         ),
         Container(
           margin: EdgeInsets.only(right: 10.w, left: 10.w),
-          height: 150.h,
+          height: 230.h,
           width: 350.w,
           decoration: BoxDecoration(
             color: ColorsManager.greyLight,
@@ -287,7 +309,7 @@ class HomeScreen extends StatelessWidget {
                       flex: 7,
                       child: Container(
                         width: 70.w,
-                        height: 70.h,
+                        height: 60.h,
                         padding: EdgeInsets.only(
                             top: 5.h, bottom: 5.h, right: 10.w, left: 10.w),
                         decoration: BoxDecoration(
@@ -317,7 +339,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 child: Text(
-                                  'القران الكريم',
+                                  'quran'.tr(),
                                   style: TextStyles.font17WhiteRegular
                                       .copyWith(fontFamily: 'kufi'),
                                 ),
@@ -328,31 +350,87 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     horizontalSpace(10),
+                    buildCard(
+                      3,
+                      imageSvgUrl: 'assets/svg/surah_name/003.svg',
+                      name: 'hadith',
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 10.h, right: 10.w, left: 10.w),
+                child: Row(
+                  children: [
+                    buildCard(
+                      4,
+                      imageSvgUrl: 'assets/svg/surah_name/003.svg',
+                      name: 'tasbih',
+                    ),
+                    horizontalSpace(10),
+                    buildCard(
+                      4,
+                      imageSvgUrl: 'assets/svg/surah_name/003.svg',
+                      name: 'hesnMuslim',
+                    ),
+                    horizontalSpace(10),
+                    buildCard(
+                      4,
+                      imageSvgUrl: 'assets/svg/surah_name/003.svg',
+                      name: 'azkarSabah',
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 10.h, right: 10.w, left: 10.w),
+                child: Row(
+                  children: [
+                    buildCard(
+                      3,
+                      imageSvgUrl: 'assets/svg/surah_name/003.svg',
+                      name: 'azkarMasaa',
+                    ),
+                    horizontalSpace(10),
                     Expanded(
-                      flex: 3,
+                      flex: 7,
                       child: Container(
                         width: 70.w,
-                        height: 70.h,
+                        height: 60.h,
                         padding: EdgeInsets.only(
                             top: 5.h, bottom: 5.h, right: 10.w, left: 10.w),
                         decoration: BoxDecoration(
-                            color: ColorsManager.primary,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(8.r)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: ColorsManager.grey.withOpacity(.4),
-                                offset: const Offset(4, 4),
-                              ),
-                            ]),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          color: ColorsManager.primary,
+                          borderRadius: BorderRadius.all(Radius.circular(8.r)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: ColorsManager.grey.withOpacity(.4),
+                              offset: const Offset(4, 4),
+                            ),
+                          ],
+                        ),
+                        child: Row(
                           children: [
-                            SvgPicture.asset('assets/svg/surah_name/003.svg'),
-                            Text(
-                              'hadith'.tr(),
-                              style: TextStyles.font10WhiteRegular
-                                  .copyWith(fontFamily: 'kufi'),
+                            SvgPicture.asset('assets/svg/surah_name/002.svg'),
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                alignment: Alignment.center,
+                                height: 55.h,
+                                width: 60.w,
+                                decoration: BoxDecoration(
+                                  color: ColorsManager.primary,
+                                  border: Border.all(color: ColorsManager.grey),
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(10.r),
+                                  ),
+                                ),
+                                child: Text(
+                                  'salah time'.tr(),
+                                  style: TextStyles.font17WhiteRegular
+                                      .copyWith(fontFamily: 'kufi'),
+                                ),
+                              ),
                             ),
                           ],
                         ),
@@ -360,7 +438,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
@@ -371,6 +449,88 @@ class HomeScreen extends StatelessWidget {
           endIndent: 15.w,
         ),
       ],
+    );
+  }
+
+  Widget buildCard(int flex,
+      {required String imageSvgUrl, required String name}) {
+    return Expanded(
+      child: Expanded(
+        flex: flex ?? 3,
+        child: Container(
+          width: 70.w,
+          height: 60.h,
+          padding:
+              EdgeInsets.only(top: 5.h, bottom: 5.h, right: 10.w, left: 10.w),
+          decoration: BoxDecoration(
+              color: ColorsManager.primary,
+              borderRadius: BorderRadius.all(Radius.circular(8.r)),
+              boxShadow: [
+                BoxShadow(
+                  color: ColorsManager.grey.withOpacity(.4),
+                  offset: const Offset(4, 4),
+                ),
+              ]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset(imageSvgUrl),
+              Text(
+                name.tr(),
+                style:
+                    TextStyles.font10WhiteRegular.copyWith(fontFamily: 'kufi'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildDailyDoaa() {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
+      // height: 150.h,
+      width: 380.w,
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: ColorsManager.greyLight.withOpacity(.7),
+            offset: const Offset(6, 6),
+          ),
+        ],
+        color: ColorsManager.grey.withOpacity(0.4),
+        borderRadius: BorderRadius.circular(8.r),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            height: 32,
+            width: 150,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                color: ColorsManager.primary,
+                borderRadius: const BorderRadius.all(Radius.circular(4))),
+            child:
+                Text('dailyZeker'.tr(), style: TextStyles.font16WhiteSemiBold),
+          ),
+          Container(
+            width: 370.w,
+            padding: EdgeInsets.all(8.w),
+            margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+            decoration: BoxDecoration(
+              border: Border.all(color: ColorsManager.primary.withOpacity(0.5)),
+              borderRadius: BorderRadius.circular(4.r),
+            ),
+            child: Text(
+              hadithList[randomIndex].content,
+              style: TextStyles.font16BlackRegular
+                  .copyWith(color: ColorsManager.primary),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

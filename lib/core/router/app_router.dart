@@ -4,6 +4,7 @@ import 'package:quran_app/core/dj/dj.dart';
 import 'package:quran_app/core/router/routes.dart';
 import 'package:quran_app/features/azkar/ui/azkar_masaa_screen.dart';
 import 'package:quran_app/features/azkar/ui/azkar_sabah_screen.dart';
+import 'package:quran_app/features/hadith/logic/cubit/hadith_cubit.dart';
 import 'package:quran_app/features/hadith/ui/hadith_screen.dart';
 import 'package:quran_app/features/home/ui/home_screen.dart';
 import 'package:quran_app/features/quran/data/model/quran_models.dart';
@@ -27,7 +28,10 @@ class AppRouter {
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (_) => HomeScreen(),
+          builder: (context) => BlocProvider.value(
+            value: HadithCubit(),
+            child: HomeScreen(),
+          ),
         );
       case Routes.hadithScreen:
         return MaterialPageRoute(
