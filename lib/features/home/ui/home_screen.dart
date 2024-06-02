@@ -324,7 +324,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: Row(
                           children: [
-                            SvgPicture.asset('assets/svg/surah_name/002.svg'),
+                            Image.asset('assets/image/salah.png'),
                             Expanded(
                               flex: 1,
                               child: Container(
@@ -352,7 +352,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     horizontalSpace(10),
                     buildCard(
                       3,
-                      imageSvgUrl: 'assets/svg/surah_name/003.svg',
+                      imageUrl: 'assets/image/salah.png',
                       name: 'hadith',
                     ),
                   ],
@@ -364,19 +364,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     buildCard(
                       4,
-                      imageSvgUrl: 'assets/svg/surah_name/003.svg',
+                      imageUrl: 'assets/image/salah.png',
                       name: 'tasbih',
                     ),
                     horizontalSpace(10),
                     buildCard(
                       4,
-                      imageSvgUrl: 'assets/svg/surah_name/003.svg',
+                      imageUrl: 'assets/image/salah.png',
                       name: 'hesnMuslim',
                     ),
                     horizontalSpace(10),
                     buildCard(
                       4,
-                      imageSvgUrl: 'assets/svg/surah_name/003.svg',
+                      imageUrl: 'assets/image/salah.png',
                       name: 'azkarSabah',
                     ),
                   ],
@@ -388,7 +388,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     buildCard(
                       3,
-                      imageSvgUrl: 'assets/svg/surah_name/003.svg',
+                      imageUrl: 'assets/image/salah.png',
                       name: 'azkarMasaa',
                     ),
                     horizontalSpace(10),
@@ -411,7 +411,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         child: Row(
                           children: [
-                            SvgPicture.asset('assets/svg/surah_name/002.svg'),
+                            Image.asset('assets/image/salah.png'),
                             Expanded(
                               flex: 1,
                               child: Container(
@@ -452,8 +452,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget buildCard(int flex,
-      {required String imageSvgUrl, required String name}) {
+  Widget buildCard(int flex, {required String imageUrl, required String name}) {
     return Expanded(
       child: Expanded(
         flex: flex ?? 3,
@@ -474,7 +473,10 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(imageSvgUrl),
+              Image.asset(
+                imageUrl,
+                height: 35.h,
+              ),
               Text(
                 name.tr(),
                 style:
