@@ -30,7 +30,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => BlocProvider.value(
             value: HadithCubit(),
-            child: HomeScreen(),
+            child: const HomeScreen(),
           ),
         );
       case Routes.hadithScreen:

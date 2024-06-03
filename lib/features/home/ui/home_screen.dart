@@ -1,9 +1,7 @@
 // ignore_for_file: must_be_immutable, deprecated_member_use
 
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 // ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,7 +17,7 @@ import 'package:quran_app/features/hadith/data/hadith_data.dart';
 import 'package:quran_app/features/hadith/logic/cubit/hadith_cubit.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -454,36 +452,34 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget buildCard(int flex, {required String imageUrl, required String name}) {
     return Expanded(
-      child: Expanded(
-        flex: flex ?? 3,
-        child: Container(
-          width: 70.w,
-          height: 60.h,
-          padding:
-              EdgeInsets.only(top: 5.h, bottom: 5.h, right: 10.w, left: 10.w),
-          decoration: BoxDecoration(
-              color: ColorsManager.primary,
-              borderRadius: BorderRadius.all(Radius.circular(8.r)),
-              boxShadow: [
-                BoxShadow(
-                  color: ColorsManager.grey.withOpacity(.4),
-                  offset: const Offset(4, 4),
-                ),
-              ]),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                imageUrl,
-                height: 35.h,
+      flex: 3,
+      child: Container(
+        width: 70.w,
+        height: 60.h,
+        padding:
+            EdgeInsets.only(top: 5.h, bottom: 5.h, right: 10.w, left: 10.w),
+        decoration: BoxDecoration(
+            color: ColorsManager.primary,
+            borderRadius: BorderRadius.all(Radius.circular(8.r)),
+            boxShadow: [
+              BoxShadow(
+                color: ColorsManager.grey.withOpacity(.4),
+                offset: const Offset(4, 4),
               ),
-              Text(
-                name.tr(),
-                style:
-                    TextStyles.font10WhiteRegular.copyWith(fontFamily: 'kufi'),
-              ),
-            ],
-          ),
+            ]),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              imageUrl,
+              height: 35.h,
+            ),
+            Text(
+              name.tr(),
+              style:
+                  TextStyles.font10WhiteRegular.copyWith(fontFamily: 'kufi'),
+            ),
+          ],
         ),
       ),
     );
