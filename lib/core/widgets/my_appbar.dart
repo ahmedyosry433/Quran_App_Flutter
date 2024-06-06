@@ -20,7 +20,7 @@ class MyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      clipBehavior: Clip.hardEdge,
+      clipBehavior: Clip.antiAliasWithSaveLayer,
       backgroundColor: ColorsManager.primary.withOpacity(0.85),
       automaticallyImplyLeading: false,
       title: Row(

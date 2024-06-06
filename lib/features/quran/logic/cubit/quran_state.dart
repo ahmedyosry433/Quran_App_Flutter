@@ -16,3 +16,12 @@ final class QuranError extends QuranState {
   final String error;
   QuranError({required this.error});
 }
+
+final class PageNumberLoding extends QuranState {}
+
+final class PageNumberSuccess extends QuranState {}
+
+final class PageNumberError extends QuranState {
+  final String error;
+  PageNumberError({required this.error});
+}

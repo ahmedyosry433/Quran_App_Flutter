@@ -10,11 +10,14 @@ import 'package:flutter_svg/svg.dart';
 import 'package:jhijri/_src/_jHijri.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quran_app/core/helper/convert_en_numbers_to_ar.dart';
+import 'package:quran_app/core/helper/extensions.dart';
 import 'package:quran_app/core/helper/spacing.dart';
+import 'package:quran_app/core/router/routes.dart';
 import 'package:quran_app/core/theme/colors.dart';
 import 'package:quran_app/core/theme/style.dart';
 import 'package:quran_app/features/hadith/data/hadith_data.dart';
 import 'package:quran_app/features/hadith/logic/cubit/hadith_cubit.dart';
+import 'package:quran_app/features/quran/logic/cubit/quran_cubit.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -38,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     randomIndex = BlocProvider.of<HadithCubit>(context)
         .getDailyRandomIndex(hadithList.length);
+    BlocProvider.of<QuranCubit>(context).getCurrentPageFromSharedPref();
   }
 
   @override
@@ -56,8 +60,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             verticalSpace(20),
             buildDate(),
-            buildLastRead(),
-            buildCategoryCard(),
+            buildLastRead(context),
+            buildCategoryCard(context),
             buildDailyDoaa(),
           ],
         ),
@@ -199,7 +203,8 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget buildLastRead() {
+  Widget buildLastRead(BuildContext context) {
+    final quranCubit = context.watch<QuranCubit>();
     return Container(
       height: 150.h,
       width: 330.w,
@@ -250,13 +255,30 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderRadius: BorderRadius.all(Radius.circular(8.0.r))),
                   ),
                   horizontalSpace(10),
-                  Expanded(
-                    flex: 4,
-                    child: Text(
-                      'رقم الصفحة : 542'.toArabicNumbers,
-                      style: TextStyles.font16BlackRegular
-                          .copyWith(fontFamily: 'kufi'),
-                    ),
+                  BlocBuilder<QuranCubit, QuranState>(
+                    builder: (context, state) {
+                      if (state is PageNumberLoding) {
+                        return Center(
+                          child: CircularProgressIndicator(
+                            valueColor:
+                                AlwaysStoppedAnimation(ColorsManager.primary),
+                          ),
+                        );
+                      } else if (state is PageNumberSuccess) {
+                        return Expanded(
+                          flex: 4,
+                          child: Text(
+                            'رقم الصفحة : ${quranCubit.currentPageNumber}'
+                                .toArabicNumbers,
+                            style: TextStyles.font16BlackRegular
+                                .copyWith(fontFamily: 'kufi'),
+                          ),
+                        );
+                      } else if (state is PageNumberError) {
+                        return Text(state.error);
+                      }
+                      return Container();
+                    },
                   ),
                 ],
               ),
@@ -279,7 +301,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget buildCategoryCard() {
+  Widget buildCategoryCard(BuildContext context) {
     return Column(
       children: [
         Divider(
@@ -305,54 +327,58 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Expanded(
                       flex: 7,
-                      child: Container(
-                        width: 70.w,
-                        height: 60.h,
-                        padding: EdgeInsets.only(
-                            top: 5.h, bottom: 5.h, right: 10.w, left: 10.w),
-                        decoration: BoxDecoration(
-                          color: ColorsManager.primary,
-                          borderRadius: BorderRadius.all(Radius.circular(8.r)),
-                          boxShadow: [
-                            BoxShadow(
-                              color: ColorsManager.grey.withOpacity(.4),
-                              offset: const Offset(4, 4),
-                            ),
-                          ],
-                        ),
-                        child: Row(
-                          children: [
-                            Image.asset('assets/image/salah.png'),
-                            Expanded(
-                              flex: 1,
-                              child: Container(
-                                alignment: Alignment.center,
-                                height: 55.h,
-                                width: 60.w,
-                                decoration: BoxDecoration(
-                                  color: ColorsManager.primary,
-                                  border: Border.all(color: ColorsManager.grey),
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(10.r),
+                      child: GestureDetector(
+                        onTap: () => context.pushNamed(Routes.quranScreen),
+                        child: Container(
+                          width: 70.w,
+                          height: 60.h,
+                          padding: EdgeInsets.only(
+                              top: 5.h, bottom: 5.h, right: 10.w, left: 10.w),
+                          decoration: BoxDecoration(
+                            color: ColorsManager.primary,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(8.r)),
+                            boxShadow: [
+                              BoxShadow(
+                                color: ColorsManager.grey.withOpacity(.4),
+                                offset: const Offset(4, 4),
+                              ),
+                            ],
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset('assets/image/salah.png'),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  height: 55.h,
+                                  width: 60.w,
+                                  decoration: BoxDecoration(
+                                    color: ColorsManager.primary,
+                                    border:
+                                        Border.all(color: ColorsManager.grey),
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(10.r),
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'quran'.tr(),
+                                    style: TextStyles.font17WhiteRegular
+                                        .copyWith(fontFamily: 'kufi'),
                                   ),
                                 ),
-                                child: Text(
-                                  'quran'.tr(),
-                                  style: TextStyles.font17WhiteRegular
-                                      .copyWith(fontFamily: 'kufi'),
-                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     horizontalSpace(10),
-                    buildCard(
-                      3,
-                      imageUrl: 'assets/image/salah.png',
-                      name: 'hadith',
-                    ),
+                    buildCard(3,
+                        imageUrl: 'assets/image/salah.png',
+                        name: 'hadith',
+                        screenRoute: Routes.hadithScreen),
                   ],
                 ),
               ),
@@ -360,23 +386,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.only(top: 10.h, right: 10.w, left: 10.w),
                 child: Row(
                   children: [
-                    buildCard(
-                      4,
-                      imageUrl: 'assets/image/salah.png',
-                      name: 'tasbih',
-                    ),
+                    buildCard(4,
+                        imageUrl: 'assets/image/salah.png',
+                        name: 'tasbih',
+                        screenRoute: Routes.tasbihScreen),
                     horizontalSpace(10),
-                    buildCard(
-                      4,
-                      imageUrl: 'assets/image/salah.png',
-                      name: 'hesnMuslim',
-                    ),
+                    buildCard(4,
+                        imageUrl: 'assets/image/salah.png',
+                        name: 'hesnMuslim',
+                        screenRoute: Routes.homeScreen),
                     horizontalSpace(10),
-                    buildCard(
-                      4,
-                      imageUrl: 'assets/image/salah.png',
-                      name: 'azkarSabah',
-                    ),
+                    buildCard(4,
+                        imageUrl: 'assets/image/salah.png',
+                        name: 'azkarSabah',
+                        screenRoute: Routes.azkarSabahScreen),
                   ],
                 ),
               ),
@@ -388,6 +411,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       3,
                       imageUrl: 'assets/image/salah.png',
                       name: 'azkarMasaa',
+                      screenRoute: Routes.azkarMasaaScreen,
                     ),
                     horizontalSpace(10),
                     Expanded(
@@ -450,36 +474,42 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget buildCard(int flex, {required String imageUrl, required String name}) {
+  Widget buildCard(int flex,
+      {required String imageUrl,
+      required String name,
+      required String screenRoute}) {
     return Expanded(
       flex: 3,
-      child: Container(
-        width: 70.w,
-        height: 60.h,
-        padding:
-            EdgeInsets.only(top: 5.h, bottom: 5.h, right: 10.w, left: 10.w),
-        decoration: BoxDecoration(
-            color: ColorsManager.primary,
-            borderRadius: BorderRadius.all(Radius.circular(8.r)),
-            boxShadow: [
-              BoxShadow(
-                color: ColorsManager.grey.withOpacity(.4),
-                offset: const Offset(4, 4),
+      child: GestureDetector(
+        onTap: () => context.pushNamed(screenRoute),
+        child: Container(
+          width: 70.w,
+          height: 60.h,
+          padding:
+              EdgeInsets.only(top: 5.h, bottom: 5.h, right: 10.w, left: 10.w),
+          decoration: BoxDecoration(
+              color: ColorsManager.primary,
+              borderRadius: BorderRadius.all(Radius.circular(8.r)),
+              boxShadow: [
+                BoxShadow(
+                  color: ColorsManager.grey.withOpacity(.4),
+                  offset: const Offset(4, 4),
+                ),
+              ]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                imageUrl,
+                height: 35.h,
               ),
-            ]),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              imageUrl,
-              height: 35.h,
-            ),
-            Text(
-              name.tr(),
-              style:
-                  TextStyles.font10WhiteRegular.copyWith(fontFamily: 'kufi'),
-            ),
-          ],
+              Text(
+                name.tr(),
+                style:
+                    TextStyles.font10WhiteRegular.copyWith(fontFamily: 'kufi'),
+              ),
+            ],
+          ),
         ),
       ),
     );

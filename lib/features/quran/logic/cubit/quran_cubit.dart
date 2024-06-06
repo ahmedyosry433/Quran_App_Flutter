@@ -1,9 +1,8 @@
-// ignore_for_file: depend_on_referenced_packages
-
-import 'dart:developer';
+// ignore_for_file: depend_on_referenced_packages, avoid_print
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:quran_app/core/helper/shared_preferences_helper.dart';
 import 'package:quran_app/features/quran/data/model/quran_models.dart';
 import 'package:quran_app/features/quran/data/repo/quran_repo.dart';
 import 'package:collection/collection.dart';
@@ -15,8 +14,8 @@ class QuranCubit extends Cubit<QuranState> {
   final QuranRepo quranRepo;
   List<List<Ayah>> pages = [];
   List<Surah> surahs = [];
-  int currentPageNumber = 1;
-   List<int> downThePageIndex = [
+  int currentPageNumber = 0;
+  List<int> downThePageIndex = [
     75,
     206,
     330,
@@ -36,7 +35,7 @@ class QuranCubit extends Cubit<QuranState> {
     556,
     583
   ];
-List<int> topOfThePageIndex = [
+  List<int> topOfThePageIndex = [
     76,
     207,
     331,
@@ -75,12 +74,10 @@ List<int> topOfThePageIndex = [
       surahs = res.surah;
       for (final surah in res.surah) {
         allAyahs.addAll(surah.ayahs);
-        // log('Added ${surah.arabicName} ayahs');
       }
       List.generate(604, (pageIndex) {
         pages
             .add(allAyahs.where((ayah) => ayah.page == pageIndex + 1).toList());
-        log('Pages Length: ${pages.length}');
       });
 
       emit(QuranSuccess(surah: res.surah));
@@ -91,10 +88,6 @@ List<int> topOfThePageIndex = [
 
   List<Ayah> getCurrentPageAyahs(int pageIndex) => pages[pageIndex];
 
-  // int getSurahNumberFromPage(int pageNumber) => surahs
-  //     .firstWhere(
-  //         (s) => s.ayahs.contains(getCurrentPageAyahs(pageNumber).first))
-  //     .surahNumber;
   List<List<Ayah>> getCurrentPageAyahsSeparatedForBasmalah(int pageIndex) =>
       pages[pageIndex]
           .splitBetween((f, s) => f.ayahNumber > s.ayahNumber)
@@ -113,8 +106,24 @@ List<int> topOfThePageIndex = [
     }
   }
 
+  getCurrentPageFromSharedPref() async {
+    emit(PageNumberLoding());
+    try {
+      currentPageNumber =
+          await SharedPreferencesHelper.getValueForKey('currentPage');
+      print("__________________________$currentPageNumber");
+      emit(PageNumberSuccess());
+    } catch (e) {
+      emit(PageNumberError(error: e.toString()));
+    }
+  }
+
   Future<void> pageChanged(int index) async {
     currentPageNumber = index + 1;
-    // print('_________________$index');
+    await SharedPreferencesHelper.setValueForKey(
+        'currentPage', currentPageNumber);
+
+    print(
+        '____________________________${await SharedPreferencesHelper.getValueForKey('currentPage')}');
   }
 }

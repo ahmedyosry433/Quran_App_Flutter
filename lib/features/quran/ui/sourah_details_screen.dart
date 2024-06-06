@@ -30,8 +30,9 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
   void initState() {
     super.initState();
     context.read<QuranCubit>().getAllQuranCubit();
-    // myDrawers = [sourahsDrawer(), categoriesDrawer()];
     pageCtr = PageController(initialPage: widget.surah.ayahs[0].page - 1);
+    BlocProvider.of<QuranCubit>(context)
+        .pageChanged(widget.surah.ayahs[0].page - 1);
   }
 
   PageController pageCtr = PageController();
@@ -83,67 +84,83 @@ class _SurahDetailsScreenState extends State<SurahDetailsScreen> {
         physics: const ClampingScrollPhysics(),
         onPageChanged: quranBloc.pageChanged,
         itemBuilder: (_, index) {
-          return Container(
-            child: BlocProvider.of<QuranCubit>(context).pages.isEmpty
-                ? const CircularProgressIndicator.adaptive()
-                : SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: 10.h, bottom: 20.h, left: 10.w, right: 10.h),
-                          child: Column(
-                            // mainAxisSize: MainAxisSize.max,
-                            children: List.generate(
-                                quranBloc
-                                    .getCurrentPageAyahsSeparatedForBasmalah(
-                                        index)
-                                    .length, (i) {
-                              final ayahs = quranBloc
-                                  .getCurrentPageAyahsSeparatedForBasmalah(
-                                      index)[i];
-                              return Column(children: [
-                                surahBannerFirstPlace(index, i),
-                                quranBloc.getSurahNumberByAyah(ayahs.first) ==
-                                            9 ||
-                                        quranBloc.getSurahNumberByAyah(
-                                                ayahs.first) ==
-                                            1
-                                    ? const SizedBox.shrink()
-                                    : Padding(
-                                        padding: EdgeInsets.only(bottom: 8.0.h),
-                                        child: ayahs.first.ayahNumber == 1
-                                            ? (quranBloc.getSurahNumberByAyah(
-                                                            ayahs.first) ==
-                                                        95 ||
-                                                    quranBloc
-                                                            .getSurahNumberByAyah(
+          
+          return Stack(
+            children: [
+              Container(
+                child: BlocProvider.of<QuranCubit>(context).pages.isEmpty
+                    ? const CircularProgressIndicator.adaptive()
+                    : SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(
+                                  top: 10.h,
+                                  bottom: 20.h,
+                                  left: 10.w,
+                                  right: 10.h),
+                              child: Column(
+                                // mainAxisSize: MainAxisSize.max,
+                                children: List.generate(
+                                    quranBloc
+                                        .getCurrentPageAyahsSeparatedForBasmalah(
+                                            index)
+                                        .length, (i) {
+
+
+
+                                  final ayahs = quranBloc
+                                      .getCurrentPageAyahsSeparatedForBasmalah(
+                                          index)[i];
+
+
+                                  return Column(
+                                    children: [
+                                    surahBannerFirstPlace(index, i),
+                                    quranBloc.getSurahNumberByAyah(
+                                                    ayahs.first) ==
+                                                9 ||
+                                            quranBloc.getSurahNumberByAyah(
+                                                    ayahs.first) ==
+                                                1
+                                        ? const SizedBox.shrink()
+                                        : Padding(
+                                            padding:
+                                                EdgeInsets.only(bottom: 8.0.h),
+                                            child: ayahs.first.ayahNumber == 1
+                                                ? (quranBloc.getSurahNumberByAyah(
                                                                 ayahs.first) ==
-                                                        97)
-                                                ? besmAllah()
-                                                : besmAllah2()
-                                            : const SizedBox.shrink(),
-                                      ),
-                                buildTextBuild(
-                                  index,
-                                  ayahs,
-                                ),
-                                // surahBannerLastPlace(index, i),
-                              ]);
-                            }),
-                          ),
+                                                            95 ||
+                                                        quranBloc.getSurahNumberByAyah(
+                                                                ayahs.first) ==
+                                                            97)
+                                                    ? besmAllah()
+                                                    : besmAllah2()
+                                                : const SizedBox.shrink(),
+                                          ),
+                                    buildTextBuild(
+                                      index,
+                                      ayahs,
+                                    ),
+                                    // surahBannerLastPlace(index, i),
+                                  ]);
+                                }),
+                              ),
+                            ),
+                          ],
                         ),
-                        Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Text(
-                            (index + 1).toArabicNumbers,
-                            style: TextStyles.font12BlackRegular
-                                .copyWith(fontFamily: 'naskh', fontSize: 15.sp),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                      ),
+              ),
+              Positioned(
+                bottom: 10.h,
+                left: 180.w,
+                child: Text(
+                  (index + 1).toArabicNumbers,
+                  style: TextStyles.font12BlackRegular
+                      .copyWith(fontFamily: 'naskh', fontSize: 15.sp),
+                ),
+              ),
+            ],
           );
         },
       ),
