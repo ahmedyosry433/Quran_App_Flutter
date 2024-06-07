@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quran_app/core/dj/dj.dart';
+import 'package:quran_app/core/dj/dependency_injection.dart';
 import 'package:quran_app/core/router/routes.dart';
 import 'package:quran_app/features/azkar/ui/azkar_masaa_screen.dart';
 import 'package:quran_app/features/azkar/ui/azkar_sabah_screen.dart';
 import 'package:quran_app/features/hadith/logic/cubit/hadith_cubit.dart';
 import 'package:quran_app/features/hadith/ui/hadith_screen.dart';
 import 'package:quran_app/features/home/ui/home_screen.dart';
+import 'package:quran_app/features/prayer_time/logic/cubit/prayer_time_cubit.dart';
+import 'package:quran_app/features/prayer_time/ui/prayer_time_screen.dart';
 import 'package:quran_app/features/quran/data/model/quran_models.dart';
 import 'package:quran_app/features/quran/logic/cubit/quran_cubit.dart';
 import 'package:quran_app/features/quran/ui/sourah_details_screen.dart';
@@ -63,6 +65,13 @@ class AppRouter {
             create: (context) => getIt<QuranCubit>(),
             child: SurahDetailsScreen(surah: argument as Surah),
           ),
+        );
+
+      case Routes.prayerTimeScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+              create: (context) => getIt<PrayerTimeCubit>(),
+              child: const PrayerTimeScreen()),
         );
       case Routes.quranScreen:
         return MaterialPageRoute(

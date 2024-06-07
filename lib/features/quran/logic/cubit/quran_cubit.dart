@@ -123,7 +123,6 @@ class QuranCubit extends Cubit<QuranState> {
     await SharedPreferencesHelper.setValueForKey(
         'currentPage', currentPageNumber);
 
-    print(
-        '____________________________${await SharedPreferencesHelper.getValueForKey('currentPage')}');
+  
   }
 }

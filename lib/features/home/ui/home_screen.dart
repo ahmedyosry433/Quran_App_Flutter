@@ -277,7 +277,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       } else if (state is PageNumberError) {
                         return Text(state.error);
                       }
-                      return Container();
+                      return const SizedBox.shrink();
                     },
                   ),
                 ],
@@ -436,21 +436,26 @@ class _HomeScreenState extends State<HomeScreen> {
                             Image.asset('assets/image/salah.png'),
                             Expanded(
                               flex: 1,
-                              child: Container(
-                                alignment: Alignment.center,
-                                height: 55.h,
-                                width: 60.w,
-                                decoration: BoxDecoration(
-                                  color: ColorsManager.primary,
-                                  border: Border.all(color: ColorsManager.grey),
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(10.r),
+                              child: GestureDetector(
+                                onTap: () =>
+                                    context.pushNamed(Routes.prayerTimeScreen),
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  height: 55.h,
+                                  width: 60.w,
+                                  decoration: BoxDecoration(
+                                    color: ColorsManager.primary,
+                                    border:
+                                        Border.all(color: ColorsManager.grey),
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(10.r),
+                                    ),
                                   ),
-                                ),
-                                child: Text(
-                                  'salah time'.tr(),
-                                  style: TextStyles.font17WhiteRegular
-                                      .copyWith(fontFamily: 'kufi'),
+                                  child: Text(
+                                    'salah time'.tr(),
+                                    style: TextStyles.font17WhiteRegular
+                                        .copyWith(fontFamily: 'kufi'),
+                                  ),
                                 ),
                               ),
                             ),
